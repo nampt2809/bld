@@ -1,0 +1,19 @@
+"--endian=little" 
+
+"--cpu=Cortex-M0+" 
+
+"--fpu=None" 
+
+"-p" 
+
+"C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\CONFIG\debugger\NXP\MKE06Z128xxx4.ddf" 
+
+"--drv_verify_download" 
+
+"--semihosting" 
+
+"--device=MKE06Z128xxx4" 
+
+
+
+
