@@ -1,31 +1,29 @@
-"C:\Users\Admin M1\Desktop\CodeNampt\bootloader\utilities\fsl_debug_console.c"
+"C:\Users\Admin M1\Desktop\CodeNampt\BLD\utilities\fsl_debug_console.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -funsigned-char
 -MD
 -MF
-C:\Users\Admin M1\Desktop\CodeNampt\bootloader\debug\BrowseInfo\utilities\fsl_debug_console.pbi.dep
+C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\BrowseInfo\utilities\fsl_debug_console.pbi.dep
 -o
-C:\Users\Admin M1\Desktop\CodeNampt\bootloader\debug\BrowseInfo\utilities\fsl_debug_console.pbi
+C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\BrowseInfo\utilities\fsl_debug_console.pbi
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\bootloader\utilities
+C:\Users\Admin M1\Desktop\CodeNampt\BLD\utilities
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\bootloader/board\
+C:\Users\Admin M1\Desktop\CodeNampt\BLD/board\
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\bootloader/CMSIS\
+C:\Users\Admin M1\Desktop\CodeNampt\BLD/CMSIS\
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\bootloader/component/lists\
+C:\Users\Admin M1\Desktop\CodeNampt\BLD/component/lists\
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\bootloader/component/uart\
+C:\Users\Admin M1\Desktop\CodeNampt\BLD/component/uart\
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\bootloader/device\
+C:\Users\Admin M1\Desktop\CodeNampt\BLD/device\
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\bootloader/drivers\
+C:\Users\Admin M1\Desktop\CodeNampt\BLD/drivers\
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\bootloader/frdmke06z/driver_examples/spi/interrupt_b2b_transfer/master\
--I
-C:\Users\Admin M1\Desktop\CodeNampt\bootloader/utilities\
+C:\Users\Admin M1\Desktop\CodeNampt\BLD/utilities\
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\inc\c\aarch32
 -I
@@ -33,21 +31,19 @@ C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\inc
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\inc\c
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\bootloader\board
+C:\Users\Admin M1\Desktop\CodeNampt\BLD\board
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\bootloader\CMSIS
+C:\Users\Admin M1\Desktop\CodeNampt\BLD\CMSIS
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\bootloader\component\lists
+C:\Users\Admin M1\Desktop\CodeNampt\BLD\component\lists
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\bootloader\component\uart
+C:\Users\Admin M1\Desktop\CodeNampt\BLD\component\uart
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\bootloader\device
+C:\Users\Admin M1\Desktop\CodeNampt\BLD\device
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\bootloader\drivers
+C:\Users\Admin M1\Desktop\CodeNampt\BLD\drivers
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\bootloader\frdmke06z\driver_examples\spi\interrupt_b2b_transfer\master
--I
-C:\Users\Admin M1\Desktop\CodeNampt\bootloader\utilities
+C:\Users\Admin M1\Desktop\CodeNampt\BLD\utilities
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0
@@ -357,6 +353,10 @@ C:\Users\Admin M1\Desktop\CodeNampt\bootloader\utilities
 -D__EDG_INT128_EXTENSIONS_ALLOWED=0
 -DDEBUG=1
 -DCPU_MKE06Z128VLK4=1
+-DPRINTF_FLOAT_ENABLE=0
+-DSCANF_FLOAT_ENABLE=0
+-DPRINTF_ADVANCED_ENABLE=0
+-DSCANF_ADVANCED_ENABLE=0
 -DFRDM_KE06Z=1
 -DFREEDOM=1
 -DMCUXPRESSO_SDK=1

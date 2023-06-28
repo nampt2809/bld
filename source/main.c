@@ -1,107 +1,187 @@
 /*
- * Copyright (c) 2015, Freescale Semiconductor, Inc.
+ * Copyright (c) 2013 - 2015, Freescale Semiconductor, Inc.
  * Copyright 2016-2017 NXP
  * All rights reserved.
  *
  * SPDX-License-Identifier: BSD-3-Clause
  */
 
-#include "headerFiles.h"
-
+#include "header_files.h"
 /*******************************************************************************
  * Definitions
  ******************************************************************************/
-
-//#define EXAMPLE_SPI_MASTER_SOURCE_CLOCK kCLOCK_BusClk
-//#define EXAMPLE_SPI_MASTER_CLK_FREQ     CLOCK_GetFreq(kCLOCK_BusClk)
+static void hardwawre_init(void);
+static void software_init(void);
+static void sys_control(void);
 
 /*******************************************************************************
  * Prototypes
  ******************************************************************************/
 
 /*******************************************************************************
- * Variables
- ******************************************************************************/
-#define BUFFER_SIZE (1)
-static uint8_t srcBuff[BUFFER_SIZE];
-static uint8_t destBuff[BUFFER_SIZE];
-spi_master_handle_t handle;
-static volatile bool masterFinished = false;
-/*******************************************************************************
  * Code
  ******************************************************************************/
-static void masterCallback(SPI_Type *base, spi_master_handle_t *masterHandle, status_t status, void *userData)
+/*!
+ * @brief Main function
+ */
+volatile bool ftm_isr_flag           = false;
+volatile uint32_t g_systickCounter;
+
+void SysTick_Handler(void)
 {
-    masterFinished = true;
+    if (g_systickCounter != 0U)
+    {
+        g_systickCounter--;
+    }
 }
 
-
+void SysTick_DelayTicks(uint32_t n)
+{
+    g_systickCounter = n;
+    while (g_systickCounter != 0U)
+    {
+    }
+}
+///=============================================================================
 int main(void)
 {
-    spi_transfer_t xfer = {0};
-    //spi_master_config_t userConfig;
-    uint32_t err     = 0;
-    uint32_t i       = 0;
-    //uint32_t srcFreq = 0;
-
-    BOARD_InitBootPins();
-    BOARD_InitBootClocks();
-    BOARD_InitDebugConsole();
-    BOARD_InitBootPeripherals();
+    ///1. init system===========================================================
+    hardwawre_init();
+    software_init();
     
-    //PRINTF("\n\rMaster Start...\n\r");
-    /*
-     * userConfig.enableStopInWaitMode = false;
-     * userConfig.polarity = kSPI_ClockPolarityActiveHigh;
-     * userConfig.phase = kSPI_ClockPhaseFirstEdge;
-     * userConfig.direction = kSPI_MsbFirst;
-     * userConfig.dataMode = kSPI_8BitMode;
-     * userConfig.txWatermark = kSPI_TxFifoOneHalfEmpty;
-     * userConfig.rxWatermark = kSPI_RxFifoOneHalfFull;
-     * userConfig.pinMode = kSPI_PinModeNormal;
-     * userConfig.outputMode = kSPI_SlaveSelectAutomaticOutput;
-     * userConfig.baudRate_Bps = 500000U;
-     */
-    //SPI_MasterGetDefaultConfig(&userConfig);
-//    srcFreq = EXAMPLE_SPI_MASTER_CLK_FREQ;
-//    SPI_MasterInit(EXAMPLE_SPI_MASTER, &userConfig, srcFreq);
-
-    /* Init Buffer */
-//    for (i = 0; i < BUFFER_SIZE; i++)
-//    {
-//        srcBuff[i] = i;
-//    }
-//
-    /* Send to slave */
-    srcBuff[0] = 0x06;
-    
-    xfer.txData   = srcBuff;
-    xfer.rxData   = destBuff;
-    xfer.dataSize = BUFFER_SIZE;
-    
-    SPI_MasterTransferCreateHandle(SPI_MASTER, &handle, masterCallback, NULL);
-    SPI_MasterTransferNonBlocking(SPI_MASTER, &handle, &xfer);
-    
-    
-    while (masterFinished != true)
+    SYSTEM_VAR_T *p_sys_var = &system_var;
+    /* Set systick reload value to generate 1ms interrupt */
+    if (SysTick_Config(SystemCoreClock / 1000U))
     {
-    }
-
-    /* Check if the data is right */
-    for (i = 0; i < BUFFER_SIZE; i++)
-    {
-        if (srcBuff[i] != destBuff[i])
+        while (1)
         {
-            err++;
-            PRINTF("The %d is wrong! data is %d\n\r", i, destBuff[i]);
         }
     }
-    if (err == 0)
-    {
-        PRINTF("Succeed!\n\r");
-    }
-
+    
+    ///2. timer 50ms ===========================================================
     while (1)
     {
+        
+        if (ftm_isr_flag)
+        {
+          p_sys_var->sys_cnt++;
+          // system control=====================================================
+          sys_control();
+          // system control=====================================================
+          ftm_isr_flag = false;
+        }
+        __WFI();
     }
+    ///3. ======================================================================
 }
+
+
+
+///1. hardwawre_init============================================================
+static void hardwawre_init(void){
+  /* Init board hardware. */
+  BOARD_InitBootPins();
+  BOARD_InitBootClocks();
+}
+
+///2.software_init==============================================================
+static void software_init(void){
+  init_timer(USER_FTM2_BASEADDR,USER_FTM2_IRQ_NUM,TIMER_PERIOD_MS);
+  init_rs485(USER_UART2,USER_UART2_IRQn,9600);
+  init_flash(USER_SPI1_MASTER);
+  init_rtc(RTC_SDA_PORT,RTC_SDA_PIN,RTC_SCL_PORT,RTC_SCL_PIN,MS);
+}
+
+static void sys_get_rtc(ST_TIME_FORMAT *p_get_rtc){
+  *p_get_rtc = get_time_rtc(RTC_SDA_PORT,RTC_SDA_PIN,RTC_SCL_PORT,RTC_SCL_PIN,MS);
+}
+
+///3. sys_control===============================================================
+uint8_t  main_test = 0; 
+#define  TEST "thanhcm33"
+#define    ADDRRRR       0xFF0000
+uint8_t  buff_read[10];
+static void sys_control(void){
+  ///1. led run.
+  RUN_LED_TOGGLE;
+  SYS_NORMAL_LED_TOGGLE;
+  sys_get_rtc(&rtc_DS3231);
+  ///2.
+
+  
+  
+  ///////////test//////////////////////////////////////////////////////////
+  if(main_test == 1){
+    SYS_ALARM_LED_ON
+    main_test = 0;
+  }
+  
+  if(main_test ==  2){
+    SYS_ALARM_LED_OFF
+    main_test = 0;
+  }
+  
+  if(main_test ==  3){
+    SYS_FAULT_LED_ON
+    main_test = 0;
+  }
+  
+  if(main_test ==  4){
+    SYS_FAULT_LED_OFF
+    main_test = 0;
+  }
+  
+  if(main_test ==  5){
+    DIR_485_ON;
+    SysTick_DelayTicks(5);
+    UART_WriteBlocking(USER_UART2, TEST, strlen(TEST));
+    SysTick_DelayTicks(5);
+    DIR_485_OFF;
+      
+    main_test = 0;
+  }
+  
+  ///test flash
+  if(main_test == 6){
+    flash_write_buffer(USER_SPI1_MASTER,TEST, ADDRRRR, 9);
+    main_test =0;
+  }else if(main_test == 7){
+    flash_erase_sector(USER_SPI1_MASTER,ADDRRRR);  
+    main_test = 0;
+    
+  }else if(main_test == 8){
+    flash_read_buffer(USER_SPI1_MASTER,buff_read, ADDRRRR, 9);
+    main_test = 0;
+  }
+  ///////////test//////////////////////////////////////////////////////////
+  
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

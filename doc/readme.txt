@@ -1,10 +1,11 @@
 Overview
 ========
-The spi_interrupt_board2board_master example shows how to use spi driver as master to do board to board transfer with
-interrupt:
-
-In this example, one spi instance as master and another spi instance on othereboard as slave. Master sends a piece of
-data to slave, and receive a piece of data from slave. This example checks if the data received from slave is correct.
+The Hello World demo application provides a sanity check for the new SDK build environments and board bring up. The Hello
+World demo prints the "Hello World" string to the terminal using the SDK UART drivers. The purpose of this demo is to
+show how to use the UART, and to provide a simple project for debugging and further development.
+Note: Please input one character at a time. If you input too many characters each time, the receiver may overflow
+because the low level UART uses simple polling way for receiving. If you want to try inputting many characters each time,
+just define DEBUG_CONSOLE_TRANSFER_NON_BLOCKING in your project to use the advanced debug console utility.
 
 Toolchain supported
 ===================
@@ -15,42 +16,29 @@ Toolchain supported
 
 Hardware requirements
 =====================
-- Mini USB cable
-- Two FRDM-KLE06Z boards
+- Mini/micro USB cable
+- FRDM-KE06Z board
 - Personal Computer
 
 Board settings
 ==============
-SPI board to board:
-Transfers data through SPI interface. SPI0 pins of the master board are
-connected to the SPI0 pins of the slave board.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-MASTER BOARD           CONNECTS TO         SLAVE BOARD
-Pin Name   Board Location     Pin Name  Board Location
-MISO       J4 pin 5           MISO      J4 pin 5
-MOSI       J4 pin 3           MOSI      J4 pin 3
-SCK        J4 pin 1           SCK       J4 pin 1
-PCS0       J4 pin 7           PCS0      J4 pin 7
-GND        J4 pin 14          GND       J4 pin 14
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+No special settings are required.
 
 Prepare the Demo
 ================
-1.  Connect a mini USB cable between the PC host and the OpenSDA USB port on the board.
-2.  Open a serial terminal on PC for OpenSDA serial device with these settings:
+1.  Connect a USB cable between the host PC and the OpenSDA USB port on the target board.
+2.  Open a serial terminal with the following settings:
     - 115200 baud rate
     - 8 data bits
     - No parity
     - One stop bit
     - No flow control
 3.  Download the program to the target board.
-4.  Reset the SoC and run the project.
+4.  Either press the reset button on your board or launch the debugger in your IDE to begin running the demo.
 
 Running the demo
 ================
-When the demo runs successfully, the log would be seen on the OpenSDA terminal like:
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Master Start...
-Succeed!
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The log below shows the output of the hello world demo in the terminal window:
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+hello world.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

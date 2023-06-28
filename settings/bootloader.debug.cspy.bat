@@ -25,7 +25,7 @@ if not "%~1" == "" goto debugFile
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "C:\Users\Admin M1\Desktop\CodeNampt\bootloader\settings\bootloader.debug.general.xcl" --backend -f "C:\Users\Admin M1\Desktop\CodeNampt\bootloader\settings\bootloader.debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "C:\Users\Admin M1\Desktop\CodeNampt\BLD\settings\bootloader.debug.general.xcl" --backend -f "C:\Users\Admin M1\Desktop\CodeNampt\BLD\settings\bootloader.debug.driver.xcl" 
 
 @echo off 
 goto end 
@@ -34,7 +34,7 @@ goto end
 
 @echo on 
 
-"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "C:\Users\Admin M1\Desktop\CodeNampt\bootloader\settings\bootloader.debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\Admin M1\Desktop\CodeNampt\bootloader\settings\bootloader.debug.driver.xcl" 
+"C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "C:\Users\Admin M1\Desktop\CodeNampt\BLD\settings\bootloader.debug.general.xcl" "--debug_file=%~1" --backend -f "C:\Users\Admin M1\Desktop\CodeNampt\BLD\settings\bootloader.debug.driver.xcl" 
 
 @echo off 
 :end

@@ -60,21 +60,23 @@ component:
 instance:
 - name: 'SPI1'
 - type: 'spi'
-- mode: 'SPI_Interrupt'
+- mode: 'SPI_Transfer'
 - custom_name_enabled: 'false'
 - type_id: 'spi_672b694426b0a10a1d774659ee8f8435'
 - functional_group: 'BOARD_InitPeripherals'
 - peripheral: 'SPI1'
 - config_sets:
-  - interrupt:
-    - interrupt_sel: 'kSPI_RxFullAndModfInterruptEnable kSPI_TxEmptyInterruptEnable'
-    - interrupt_rx_tx:
-      - IRQn: 'SPI1_IRQn'
-      - enable_interrrupt: 'enabled'
-      - enable_priority: 'false'
-      - priority: '0'
-      - enable_custom_name: 'false'
-    - quick_selection: 'QS_IRQ_priority1'
+  - transferCfg:
+    - transfer:
+      - init_transfer: 'true'
+      - transfer_cfg:
+        - txDataBufferEnable: 'true'
+        - rxDataBufferEnable: 'true'
+        - dataSize: '10'
+      - init_callback: 'false'
+      - callback_fcn: ''
+      - user_data: ''
+    - quick_selection: 'QuickSelection1'
   - fsl_spi:
     - spi_mode: 'kSPI_Master'
     - clockSource: 'BusInterfaceClock'
@@ -88,6 +90,10 @@ instance:
       - outputMode: 'kSPI_SlaveSelectAutomaticOutput'
       - pinMode: 'kSPI_PinModeNormal'
       - baudRate_Bps: '500000'
+    - interrupt_rx_tx:
+      - IRQn: 'SPI1_IRQn'
+      - enable_priority: 'false'
+      - priority: '0'
     - quick_selection: 'QS_SPI_1'
  * BE CAREFUL MODIFYING THIS COMMENT - IT IS YAML SETTINGS FOR TOOLS **********/
 /* clang-format on */
@@ -101,14 +107,14 @@ const spi_master_config_t SPI1_config = {
   .pinMode = kSPI_PinModeNormal,
   .baudRate_Bps = 500000UL
 };
+spi_master_handle_t SPI1_handle;
+uint8_t SPI1_txBuffer[SPI1_BUFFER_SIZE];
+uint8_t SPI1_rxBuffer[SPI1_BUFFER_SIZE];
 
 static void SPI1_init(void) {
   /* Initialization function */
   SPI_MasterInit(SPI1_PERIPHERAL, &SPI1_config, SPI1_CLK_FREQ);
-  /* Enable interrupts */
-  SPI_EnableInterrupts(SPI1_PERIPHERAL, (kSPI_RxFullAndModfInterruptEnable | kSPI_TxEmptyInterruptEnable));
-  /* Enable interrupt SPI1_IRQn request in the NVIC. */
-  EnableIRQ(SPI1_IRQN);
+  SPI_MasterTransferCreateHandle(SPI1_PERIPHERAL, &SPI1_handle, NULL, NULL);
 }
 
 /***********************************************************************************************************************

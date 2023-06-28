@@ -1,7 +1,7 @@
-C:\Users\Admin\ M1\Desktop\CodeNampt\bootloader\debug\BrowseInfo\component\lists\fsl_component_generic_list.pbi: \
-  C:\Users\Admin\ M1\Desktop\CodeNampt\bootloader\component\lists\fsl_component_generic_list.c \
-  C:\Users\Admin\ M1\Desktop\CodeNampt\bootloader\component\lists\fsl_component_generic_list.h \
-  C:\Users\Admin\ M1\Desktop\CodeNampt\bootloader\drivers\fsl_common.h \
+C:\Users\Admin\ M1\Desktop\CodeNampt\BLD\debug\BrowseInfo\component\lists\fsl_component_generic_list.pbi: \
+  C:\Users\Admin\ M1\Desktop\CodeNampt\BLD\component\lists\fsl_component_generic_list.c \
+  C:\Users\Admin\ M1\Desktop\CodeNampt\BLD\component\lists\fsl_component_generic_list.h \
+  C:\Users\Admin\ M1\Desktop\CodeNampt\BLD\drivers\fsl_common.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\assert.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\ycheck.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\yvals.h \
@@ -16,15 +16,15 @@ C:\Users\Admin\ M1\Desktop\CodeNampt\bootloader\debug\BrowseInfo\component\lists
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stdlib.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\DLib_Product_stdlib.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\stddef.h \
-  C:\Users\Admin\ M1\Desktop\CodeNampt\bootloader\device\fsl_device_registers.h \
-  C:\Users\Admin\ M1\Desktop\CodeNampt\bootloader\device\MKE06Z4.h \
-  C:\Users\Admin\ M1\Desktop\CodeNampt\bootloader\CMSIS\core_cm0plus.h \
-  C:\Users\Admin\ M1\Desktop\CodeNampt\bootloader\CMSIS\cmsis_version.h \
-  C:\Users\Admin\ M1\Desktop\CodeNampt\bootloader\CMSIS\cmsis_compiler.h \
-  C:\Users\Admin\ M1\Desktop\CodeNampt\bootloader\CMSIS\cmsis_iccarm.h \
+  C:\Users\Admin\ M1\Desktop\CodeNampt\BLD\device\fsl_device_registers.h \
+  C:\Users\Admin\ M1\Desktop\CodeNampt\BLD\device\MKE06Z4.h \
+  C:\Users\Admin\ M1\Desktop\CodeNampt\BLD\CMSIS\core_cm0plus.h \
+  C:\Users\Admin\ M1\Desktop\CodeNampt\BLD\CMSIS\cmsis_version.h \
+  C:\Users\Admin\ M1\Desktop\CodeNampt\BLD\CMSIS\cmsis_compiler.h \
+  C:\Users\Admin\ M1\Desktop\CodeNampt\BLD\CMSIS\cmsis_iccarm.h \
   C:\Program\ Files\IAR\ Systems\Embedded\ Workbench\ 9.0\arm\inc\c\aarch32\iccarm_builtin.h \
-  C:\Users\Admin\ M1\Desktop\CodeNampt\bootloader\device\system_MKE06Z4.h \
-  C:\Users\Admin\ M1\Desktop\CodeNampt\bootloader\device\MKE06Z4_features.h \
-  C:\Users\Admin\ M1\Desktop\CodeNampt\bootloader\drivers\fsl_common_arm.h \
-  C:\Users\Admin\ M1\Desktop\CodeNampt\bootloader\drivers\fsl_clock.h \
-  C:\Users\Admin\ M1\Desktop\CodeNampt\bootloader\drivers\fsl_common.h
+  C:\Users\Admin\ M1\Desktop\CodeNampt\BLD\device\system_MKE06Z4.h \
+  C:\Users\Admin\ M1\Desktop\CodeNampt\BLD\device\MKE06Z4_features.h \
+  C:\Users\Admin\ M1\Desktop\CodeNampt\BLD\drivers\fsl_common_arm.h \
+  C:\Users\Admin\ M1\Desktop\CodeNampt\BLD\drivers\fsl_clock.h \
+  C:\Users\Admin\ M1\Desktop\CodeNampt\BLD\drivers\fsl_common.h

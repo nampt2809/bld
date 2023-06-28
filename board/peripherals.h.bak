@@ -26,7 +26,11 @@ extern "C" {
 /* Definition of the clock source */
 #define SPI1_CLOCK_SOURCE SPI1_CLK_SRC
 /* Definition of the clock source frequency */
-#define SPI1_CLK_FREQ 20000000UL
+#define SPI1_CLK_FREQ 24000000UL
+/* SPI1 interrupt vector ID (number). */
+#define SPI1_IRQN SPI1_IRQn
+/* SPI1 interrupt handler identifier. */
+#define SPI1_IRQHANDLER SPI1_IRQHandler
 
 /***********************************************************************************************************************
  * Global variables

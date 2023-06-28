@@ -26,16 +26,19 @@ extern "C" {
 /* Definition of the clock source */
 #define SPI1_CLOCK_SOURCE SPI1_CLK_SRC
 /* Definition of the clock source frequency */
-#define SPI1_CLK_FREQ 20000000UL
+#define SPI1_CLK_FREQ 24000000UL
 /* SPI1 interrupt vector ID (number). */
 #define SPI1_IRQN SPI1_IRQn
-/* SPI1 interrupt handler identifier. */
-#define SPI1_IRQHANDLER SPI1_IRQHandler
+/* Transfer buffer size. */
+#define SPI1_BUFFER_SIZE 10
 
 /***********************************************************************************************************************
  * Global variables
  **********************************************************************************************************************/
 extern const spi_master_config_t SPI1_config;
+extern spi_master_handle_t SPI1_handle;
+extern uint8_t SPI1_txBuffer[SPI1_BUFFER_SIZE];
+extern uint8_t SPI1_rxBuffer[SPI1_BUFFER_SIZE];
 
 /***********************************************************************************************************************
  * Initialization functions
