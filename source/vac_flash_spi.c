@@ -61,7 +61,6 @@ static uint8_t flash_chip_select_spi1(uint8_t state){
 static uint8_t flash_write_byte(SPI_Type *base,uint8_t byte){
   uint8_t retVal      =   0;
   spi_transfer_t xfer = {0};
-  
   xfer.txData   = &byte;
   xfer.rxData   = &retVal;
   xfer.dataSize = 1; 
@@ -383,7 +382,7 @@ uint8_t flash_start_read_sequence(SPI_Type *base,uint32_t ReadAddr)
 }
 
 
-
+///15.==========================================================================
 
 
 

@@ -445,10 +445,11 @@ status_t FLASH_Init(flash_config_t *config)
 #endif
     {
         /* fill out a few of the structure members */
-        config->PFlashBlockBase  = FSL_FEATURE_FLASH_PFLASH_START_ADDRESS;
-        config->PFlashTotalSize  = FSL_FEATURE_FLASH_PFLASH_BLOCK_COUNT * FSL_FEATURE_FLASH_PFLASH_BLOCK_SIZE;
-        config->PFlashBlockCount = FSL_FEATURE_FLASH_PFLASH_BLOCK_COUNT;
-        config->PFlashSectorSize = FSL_FEATURE_FLASH_PFLASH_BLOCK_SECTOR_SIZE;
+      // 128kb chia cho 256 sector moi sector chua 512 bytes
+        config->PFlashBlockBase  = FSL_FEATURE_FLASH_PFLASH_START_ADDRESS; // 0x00
+        config->PFlashTotalSize  = FSL_FEATURE_FLASH_PFLASH_BLOCK_COUNT * FSL_FEATURE_FLASH_PFLASH_BLOCK_SIZE;  //1 * 131072(FSL_FEATURE_FLASH_PFLASH_BLOCK_SIZE = 128kb)
+        config->PFlashBlockCount = FSL_FEATURE_FLASH_PFLASH_BLOCK_COUNT; // 1 
+        config->PFlashSectorSize = FSL_FEATURE_FLASH_PFLASH_BLOCK_SECTOR_SIZE; //512 bytes
     }
     config->PFlashCallback = NULL;
 

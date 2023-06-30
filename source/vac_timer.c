@@ -31,7 +31,6 @@ uint8_t init_timer(FTM_Type *base,IRQn_Type interrupt,uint32_t timer_period_ms){
   FTM_StartTimer(base, kFTM_SystemClock);
   
   return err;
-  
 }
 
 

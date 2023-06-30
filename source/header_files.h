@@ -9,7 +9,7 @@
 #include "fsl_ftm.h"
 #include "fsl_uart.h"
 #include "fsl_spi.h"
-
+#include "fsl_flash.h"
 #include "fsl_common.h"
 #include "string.h"
 
