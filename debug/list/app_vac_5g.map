@@ -1,59 +1,45 @@
 ###############################################################################
 #
-# IAR ELF Linker V9.20.4.327/W64 for ARM                  30/Jun/2023  18:28:30
+# IAR ELF Linker V9.20.4.327/W64 for ARM                  01/Jul/2023  00:09:52
 # Copyright 2007-2022 IAR Systems AB.
 #
 #    Output file  =
-#        C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\app_vac_5g.out
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\app_vac_5g.out
 #    Map file     =
-#        C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\list\app_vac_5g.map
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\list\app_vac_5g.map
 #    Command line =
-#        -f "C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\app_vac_5g.out.rsp"
-#        ("C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\board\board.o"
-#        "C:\Users\Admin
-#        M1\Desktop\CodeNampt\BLD\debug\obj\board\clock_config.o"
-#        "C:\Users\Admin
-#        M1\Desktop\CodeNampt\BLD\debug\obj\component\uart\fsl_adapter_uart.o"
-#        "C:\Users\Admin
-#        M1\Desktop\CodeNampt\BLD\debug\obj\utilities\fsl_assert.o"
-#        "C:\Users\Admin
-#        M1\Desktop\CodeNampt\BLD\debug\obj\drivers\fsl_clock.o"
-#        "C:\Users\Admin
-#        M1\Desktop\CodeNampt\BLD\debug\obj\drivers\fsl_common.o"
-#        "C:\Users\Admin
-#        M1\Desktop\CodeNampt\BLD\debug\obj\drivers\fsl_common_arm.o"
-#        "C:\Users\Admin
-#        M1\Desktop\CodeNampt\BLD\debug\obj\component\lists\fsl_component_generic_list.o"
-#        "C:\Users\Admin
-#        M1\Desktop\CodeNampt\BLD\debug\obj\utilities\fsl_debug_console.o"
-#        "C:\Users\Admin
-#        M1\Desktop\CodeNampt\BLD\debug\obj\drivers\fsl_flash.o"
-#        "C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\drivers\fsl_ftm.o"
-#        "C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\drivers\fsl_gpio.o"
-#        "C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\drivers\fsl_port.o"
-#        "C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\drivers\fsl_spi.o"
-#        "C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\drivers\fsl_uart.o"
-#        "C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\source\main.o"
-#        "C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\board\pin_mux.o"
-#        "C:\Users\Admin
-#        M1\Desktop\CodeNampt\BLD\debug\obj\startup\startup_MKE06Z4.o"
-#        "C:\Users\Admin
-#        M1\Desktop\CodeNampt\BLD\debug\obj\device\system_MKE06Z4.o"
-#        "C:\Users\Admin
-#        M1\Desktop\CodeNampt\BLD\debug\obj\source\vac_flash_spi.o"
-#        "C:\Users\Admin
-#        M1\Desktop\CodeNampt\BLD\debug\obj\source\vac_i2c_soft.o"
-#        "C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\source\vac_rs485.o"
-#        "C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\source\vac_timer.o"
-#        "C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\source\vac_uart.o"
-#        "C:\Users\Admin
-#        M1\Desktop\CodeNampt\BLD\debug\obj\source\vac_variables.o" --redirect
-#        _Printf=_PrintfSmallNoMb --redirect _Scanf=_ScanfSmallNoMb
-#        --no_out_extension -o "C:\Users\Admin
-#        M1\Desktop\CodeNampt\BLD\debug\app_vac_5g.out" --map "C:\Users\Admin
-#        M1\Desktop\CodeNampt\BLD\debug\list\app_vac_5g.map" --config
-#        "C:\Users\Admin
-#        M1\Desktop\CodeNampt\BLD/MKE06Z4/iar/MKE06Z128xxx4_flash.icf"
+#        -f C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\app_vac_5g.out.rsp
+#        (C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\board\board.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\board\clock_config.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\component\uart\fsl_adapter_uart.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\utilities\fsl_assert.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\drivers\fsl_clock.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\drivers\fsl_common.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\drivers\fsl_common_arm.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\component\lists\fsl_component_generic_list.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\utilities\fsl_debug_console.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\drivers\fsl_flash.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\drivers\fsl_ftm.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\drivers\fsl_gpio.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\drivers\fsl_port.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\drivers\fsl_spi.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\drivers\fsl_uart.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\source\main.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\board\pin_mux.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\startup\startup_MKE06Z4.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\device\system_MKE06Z4.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\source\vac_flash_spi.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\source\vac_i2c_soft.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\source\vac_rs485.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\source\vac_timer.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\source\vac_uart.o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\source\vac_variables.o
+#        --redirect _Printf=_PrintfSmallNoMb --redirect _Scanf=_ScanfSmallNoMb
+#        --no_out_extension -o
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\app_vac_5g.out --map
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\list\app_vac_5g.map
+#        --config
+#        C:\Users\phamt\Desktop\CODE\BootloaderVAC/MKE06Z4/iar/MKE06Z128xxx4_flash.icf
 #        --semihosting --entry Reset_Handler --vfe --text_out locale)
 #
 ###############################################################################
@@ -123,7 +109,7 @@ No sections matched the following patterns:
   FlashConfig        ro code        0x400    0x10  startup_MKE06Z4.o [7]
                                   - 0x410    0x10
 
-"P2", part 2 of 2:                         0x2b76
+"P2", part 2 of 2:                         0x2f7e
   .text              ro code        0x410   0x644  vac_i2c_soft.o [6]
   .text              ro code        0xa54   0x17c  fsl_gpio.o [5]
   .text              ro code        0xbd0    0x4e  ABImemcpy.o [10]
@@ -134,102 +120,102 @@ No sections matched the following patterns:
   .text              ro code        0xc40   0x3f2  fsl_debug_console.o [8]
   .rodata            const         0x1032     0x2  pin_mux.o [1]
   .text              ro code       0x1034     0xe  strlen.o [10]
-  .text              ro code       0x1042   0x3b6  vac_flash_spi.o [6]
-  .text              ro code       0x13f8   0x37c  fsl_spi.o [5]
-  .text              ro code       0x1774   0x2dc  fsl_clock.o [5]
-  .text              ro code       0x1a50    0x52  ABImemset.o [10]
-  .rodata            const         0x1aa2     0x2  pin_mux.o [1]
-  .text              ro code       0x1aa4   0x2fa  fsl_ftm.o [5]
-  .rodata            const         0x1d9e     0x2  pin_mux.o [1]
-  .text              ro code       0x1da0   0x2f4  main.o [6]
-  .text              ro code       0x2094   0x150  pin_mux.o [1]
-  .text              ro code       0x21e4    0x5c  clock_config.o [1]
-  .text              ro code       0x2240   0x19c  vac_timer.o [6]
-  .text              ro code       0x23dc    0x88  vac_rs485.o [6]
-  .text              ro code       0x2464   0x260  fsl_uart.o [5]
-  .text              ro code       0x26c4   0x18c  fsl_flash.o [5]
-  .text              ro code       0x2850    0x74  fsl_port.o [5]
-  .text              ro code       0x28c4    0x32  I64Mul.o [10]
-  .text              ro code       0x28f6    0x7c  I64DivMod.o [10]
-  .rodata            const         0x2972     0x2  pin_mux.o [1]
-  .text              ro code       0x2974     0x2  I64DivZer.o [10]
-  .rodata            const         0x2976     0x2  pin_mux.o [1]
-  .text              ro code       0x2978    0x48  system_MKE06Z4.o [4]
-  .text              ro code       0x29c0     0x2  system_MKE06Z4.o [4]
-  .rodata            const         0x29c2     0x2  pin_mux.o [1]
-  .rodata            const         0x29c4    0x3c  fsl_clock.o [5]
-  .rodata            const         0x2a00    0x3c  fsl_ftm.o [5]
-  .rodata            const         0x2a3c    0x3c  fsl_gpio.o [5]
-  .rodata            const         0x2a78    0x3c  fsl_spi.o [5]
-  .rodata            const         0x2ab4    0x3c  fsl_spi.o [5]
-  .rodata            const         0x2af0    0x3c  fsl_uart.o [5]
-  .rodata            const         0x2b2c    0x3c  vac_timer.o [6]
-  .text              ro code       0x2b68    0x3c  vac_uart.o [6]
-  .text              ro code       0x2ba4    0x3c  zero_init3.o [10]
-  .rodata            const         0x2be0    0x34  vac_timer.o [6]
-  .text              ro code       0x2c14    0x30  copy_init3.o [10]
-  .rodata            const         0x2c44    0x2c  fsl_assert.o [8]
-  .rodata            const         0x2c70    0x2c  main.o [6]
-  .rodata            const         0x2c9c    0x28  fsl_spi.o [5]
-  .rodata            const         0x2cc4    0x28  vac_timer.o [6]
-  .text              ro code       0x2cec    0x28  startup_MKE06Z4.o [7]
-  .text              ro code       0x2d14    0x28  data_init.o [10]
-  .iar.init_table    const         0x2d3c    0x24  - Linker created -
-  .text              ro code       0x2d60    0x1e  cmain.o [10]
-  .text              ro code       0x2d7e     0x4  low_level_init.o [9]
-  .text              ro code       0x2d82     0x8  exit.o [9]
-  .rodata            const         0x2d8a     0x2  pin_mux.o [1]
-  .text              ro code       0x2d8c     0xa  cexit.o [10]
-  .rodata            const         0x2d96     0x2  pin_mux.o [1]
-  .text              ro code       0x2d98    0x14  exit.o [11]
-  .rodata            const         0x2dac    0x1c  fsl_flash.o [5]
-  .rodata            const         0x2dc8    0x1c  fsl_ftm.o [5]
-  .rodata            const         0x2de4    0x1c  fsl_uart.o [5]
-  .rodata            const         0x2e00    0x1c  fsl_uart.o [5]
-  .text              ro code       0x2e1c    0x1c  cstartup_M.o [10]
-  .rodata            const         0x2e38    0x14  fsl_spi.o [5]
-  .rodata            const         0x2e4c    0x14  fsl_spi.o [5]
-  .rodata            const         0x2e60    0x10  fsl_ftm.o [5]
-  .rodata            const         0x2e70     0xc  fsl_clock.o [5]
-  .rodata            const         0x2e7c     0xc  fsl_flash.o [5]
-  .rodata            const         0x2e88     0xc  fsl_ftm.o [5]
-  .rodata            const         0x2e94     0xc  fsl_ftm.o [5]
-  .rodata            const         0x2ea0     0xc  fsl_ftm.o [5]
-  .rodata            const         0x2eac     0xc  fsl_gpio.o [5]
-  .rodata            const         0x2eb8     0xc  fsl_spi.o [5]
-  .rodata            const         0x2ec4     0xc  fsl_uart.o [5]
-  .rodata            const         0x2ed0     0xc  fsl_uart.o [5]
-  .rodata            const         0x2edc     0xc  fsl_uart.o [5]
-  .rodata            const         0x2ee8     0xc  main.o [6]
-  .rodata            const         0x2ef4     0x8  fsl_ftm.o [5]
-  .rodata            const         0x2efc     0x8  fsl_gpio.o [5]
-  .rodata            const         0x2f04     0x8  fsl_spi.o [5]
-  .rodata            const         0x2f0c     0x8  fsl_spi.o [5]
-  .text              ro code       0x2f14     0x8  startup_MKE06Z4.o [7]
-  .text              ro code       0x2f1c     0x8  startup_MKE06Z4.o [7]
-  .text              ro code       0x2f24     0x8  startup_MKE06Z4.o [7]
-  .text              ro code       0x2f2c     0x8  startup_MKE06Z4.o [7]
-  .text              ro code       0x2f34     0x8  startup_MKE06Z4.o [7]
-  .text              ro code       0x2f3c     0x8  startup_MKE06Z4.o [7]
-  .text              ro code       0x2f44     0x8  startup_MKE06Z4.o [7]
-  .text              ro code       0x2f4c     0x8  startup_MKE06Z4.o [7]
-  .text              ro code       0x2f54     0x8  startup_MKE06Z4.o [7]
-  .text              ro code       0x2f5c     0x8  startup_MKE06Z4.o [7]
-  Initializer bytes  const         0x2f64     0x8  <for RW-1>
-  .rodata            const         0x2f6c     0x4  clock_config.o [1]
-  .rodata            const         0x2f70     0x4  clock_config.o [1]
-  .rodata            const         0x2f74     0x2  pin_mux.o [1]
-  .rodata            const         0x2f76     0x2  pin_mux.o [1]
-  .rodata            const         0x2f78     0x2  vac_i2c_soft.o [6]
-  .rodata            const         0x2f7a     0x2  vac_i2c_soft.o [6]
-  .rodata            const         0x2f7c     0x2  vac_i2c_soft.o [6]
-  .text              ro code       0x2f7e     0x2  startup_MKE06Z4.o [7]
-  .text              ro code       0x2f80     0x2  startup_MKE06Z4.o [7]
-  .text              ro code       0x2f82     0x2  startup_MKE06Z4.o [7]
-  .text              ro code       0x2f84     0x2  startup_MKE06Z4.o [7]
-  .rodata            const         0x2f86     0x0  zero_init3.o [10]
-  .rodata            const         0x2f86     0x0  copy_init3.o [10]
-                                 - 0x2f86  0x2b76
+  .rodata            const         0x1042     0x2  pin_mux.o [1]
+  .text              ro code       0x1044   0x4d4  fsl_flash.o [5]
+  .text              ro code       0x1518    0x52  ABImemset.o [10]
+  .text              ro code       0x156a   0x3b6  vac_flash_spi.o [6]
+  .text              ro code       0x1920   0x37c  fsl_spi.o [5]
+  .text              ro code       0x1c9c   0x2dc  fsl_clock.o [5]
+  .text              ro code       0x1f78   0x3a8  main.o [6]
+  .text              ro code       0x2320   0x150  pin_mux.o [1]
+  .text              ro code       0x2470    0x5c  clock_config.o [1]
+  .text              ro code       0x24cc   0x19c  vac_timer.o [6]
+  .text              ro code       0x2668    0x88  vac_rs485.o [6]
+  .text              ro code       0x26f0   0x260  fsl_uart.o [5]
+  .text              ro code       0x2950    0x74  fsl_port.o [5]
+  .text              ro code       0x29c4   0x2fa  fsl_ftm.o [5]
+  .rodata            const         0x2cbe     0x2  pin_mux.o [1]
+  .text              ro code       0x2cc0    0x32  I64Mul.o [10]
+  .text              ro code       0x2cf2    0x7c  I64DivMod.o [10]
+  .rodata            const         0x2d6e     0x2  pin_mux.o [1]
+  .text              ro code       0x2d70     0x2  I64DivZer.o [10]
+  .rodata            const         0x2d72     0x2  pin_mux.o [1]
+  .text              ro code       0x2d74    0x48  system_MKE06Z4.o [4]
+  .text              ro code       0x2dbc     0x2  system_MKE06Z4.o [4]
+  .rodata            const         0x2dbe     0x2  pin_mux.o [1]
+  .rodata            const         0x2dc0    0x40  fsl_clock.o [5]
+  .rodata            const         0x2e00    0x40  fsl_gpio.o [5]
+  .rodata            const         0x2e40    0x40  fsl_uart.o [5]
+  .rodata            const         0x2e80    0x3c  fsl_ftm.o [5]
+  .rodata            const         0x2ebc    0x3c  fsl_spi.o [5]
+  .rodata            const         0x2ef8    0x3c  fsl_spi.o [5]
+  .rodata            const         0x2f34    0x3c  vac_timer.o [6]
+  .text              ro code       0x2f70    0x3c  vac_uart.o [6]
+  .text              ro code       0x2fac    0x3c  zero_init3.o [10]
+  .rodata            const         0x2fe8    0x34  vac_timer.o [6]
+  .text              ro code       0x301c    0x30  copy_init3.o [10]
+  .rodata            const         0x304c    0x2c  fsl_assert.o [8]
+  .rodata            const         0x3078    0x2c  main.o [6]
+  .rodata            const         0x30a4    0x28  fsl_spi.o [5]
+  .rodata            const         0x30cc    0x28  vac_timer.o [6]
+  .text              ro code       0x30f4    0x28  startup_MKE06Z4.o [7]
+  .text              ro code       0x311c    0x28  data_init.o [10]
+  .iar.init_table    const         0x3144    0x24  - Linker created -
+  .text              ro code       0x3168    0x1e  cmain.o [10]
+  .text              ro code       0x3186     0x4  low_level_init.o [9]
+  .text              ro code       0x318a     0x8  exit.o [9]
+  .rodata            const         0x3192     0x2  pin_mux.o [1]
+  .text              ro code       0x3194     0xa  cexit.o [10]
+  .rodata            const         0x319e     0x2  pin_mux.o [1]
+  .text              ro code       0x31a0    0x14  exit.o [11]
+  .rodata            const         0x31b4    0x1c  fsl_flash.o [5]
+  .rodata            const         0x31d0    0x1c  fsl_ftm.o [5]
+  .rodata            const         0x31ec    0x1c  fsl_uart.o [5]
+  .rodata            const         0x3208    0x1c  fsl_uart.o [5]
+  .text              ro code       0x3224    0x1c  cstartup_M.o [10]
+  .rodata            const         0x3240    0x14  fsl_spi.o [5]
+  .rodata            const         0x3254    0x14  fsl_spi.o [5]
+  .rodata            const         0x3268    0x10  fsl_ftm.o [5]
+  .rodata            const         0x3278     0xc  fsl_clock.o [5]
+  .rodata            const         0x3284     0xc  fsl_flash.o [5]
+  .rodata            const         0x3290     0xc  fsl_ftm.o [5]
+  .rodata            const         0x329c     0xc  fsl_ftm.o [5]
+  .rodata            const         0x32a8     0xc  fsl_ftm.o [5]
+  .rodata            const         0x32b4     0xc  fsl_gpio.o [5]
+  .rodata            const         0x32c0     0xc  fsl_spi.o [5]
+  .rodata            const         0x32cc     0xc  fsl_uart.o [5]
+  .rodata            const         0x32d8     0xc  fsl_uart.o [5]
+  .rodata            const         0x32e4     0xc  fsl_uart.o [5]
+  .rodata            const         0x32f0     0xc  main.o [6]
+  .rodata            const         0x32fc     0x8  fsl_ftm.o [5]
+  .rodata            const         0x3304     0x8  fsl_gpio.o [5]
+  .rodata            const         0x330c     0x8  fsl_spi.o [5]
+  .rodata            const         0x3314     0x8  fsl_spi.o [5]
+  .text              ro code       0x331c     0x8  startup_MKE06Z4.o [7]
+  .text              ro code       0x3324     0x8  startup_MKE06Z4.o [7]
+  .text              ro code       0x332c     0x8  startup_MKE06Z4.o [7]
+  .text              ro code       0x3334     0x8  startup_MKE06Z4.o [7]
+  .text              ro code       0x333c     0x8  startup_MKE06Z4.o [7]
+  .text              ro code       0x3344     0x8  startup_MKE06Z4.o [7]
+  .text              ro code       0x334c     0x8  startup_MKE06Z4.o [7]
+  .text              ro code       0x3354     0x8  startup_MKE06Z4.o [7]
+  .text              ro code       0x335c     0x8  startup_MKE06Z4.o [7]
+  .text              ro code       0x3364     0x8  startup_MKE06Z4.o [7]
+  Initializer bytes  const         0x336c     0x8  <for RW-1>
+  .rodata            const         0x3374     0x4  clock_config.o [1]
+  .rodata            const         0x3378     0x4  clock_config.o [1]
+  .rodata            const         0x337c     0x2  pin_mux.o [1]
+  .rodata            const         0x337e     0x2  pin_mux.o [1]
+  .rodata            const         0x3380     0x2  vac_i2c_soft.o [6]
+  .rodata            const         0x3382     0x2  vac_i2c_soft.o [6]
+  .rodata            const         0x3384     0x2  vac_i2c_soft.o [6]
+  .text              ro code       0x3386     0x2  startup_MKE06Z4.o [7]
+  .text              ro code       0x3388     0x2  startup_MKE06Z4.o [7]
+  .text              ro code       0x338a     0x2  startup_MKE06Z4.o [7]
+  .text              ro code       0x338c     0x2  startup_MKE06Z4.o [7]
+  .rodata            const         0x338e     0x0  zero_init3.o [10]
+  .rodata            const         0x338e     0x0  copy_init3.o [10]
+                                 - 0x338e  0x2f7e
 
 "P3-P4|P7-P9", part 1 of 2:                   0x8
   RW                          0x1fff'f000     0x8  <Block>
@@ -238,29 +224,33 @@ No sections matched the following patterns:
       .data          inited   0x1fff'f004     0x4  system_MKE06Z4.o [4]
                             - 0x1fff'f008     0x8
 
-"P3-P4|P7-P9", part 2 of 2:                 0x378
-  ZI                          0x1fff'f008   0x378  <Block>
+"P3-P4|P7-P9", part 2 of 2:                0x1380
+  ZI                          0x1fff'f008  0x1380  <Block>
     .bss             zero     0x1fff'f008     0x4  fsl_clock.o [5]
     .bss             zero     0x1fff'f00c    0x14  fsl_debug_console.o [8]
-    .bss             zero     0x1fff'f020    0x40  fsl_flash.o [5]
-    .bss             zero     0x1fff'f060    0x40  fsl_flash.o [5]
-    .bss             zero     0x1fff'f0a0     0x8  fsl_spi.o [5]
-    .bss             zero     0x1fff'f0a8     0x4  fsl_spi.o [5]
-    .bss             zero     0x1fff'f0ac     0x4  fsl_spi.o [5]
-    .bss             zero     0x1fff'f0b0     0xc  fsl_uart.o [5]
-    .bss             zero     0x1fff'f0bc     0x4  fsl_uart.o [5]
-    .bss             zero     0x1fff'f0c0    0x38  main.o [6]
-    .bss             zero     0x1fff'f0f8     0x4  main.o [6]
-    .bss             zero     0x1fff'f0fc     0x4  main.o [6]
-    .bss             zero     0x1fff'f100   0x200  main.o [6]
-    .bss             zero     0x1fff'f300     0x8  vac_i2c_soft.o [6]
-    .bss             zero     0x1fff'f308    0x64  vac_uart.o [6]
-    .bss             zero     0x1fff'f36c     0xc  vac_variables.o [6]
-    .bss             zero     0x1fff'f378     0x2  fsl_spi.o [5]
-    .bss             zero     0x1fff'f37a     0x1  main.o [6]
-    .bss             zero     0x1fff'f37b     0x1  main.o [6]
-    .bss             zero     0x1fff'f37c     0x1  vac_uart.o [6]
-                            - 0x1fff'f380   0x378
+    .bss             zero     0x1fff'f020     0x4  fsl_flash.o [5]
+    .bss             zero     0x1fff'f024     0x4  fsl_flash.o [5]
+    .bss             zero     0x1fff'f028    0x40  fsl_flash.o [5]
+    .bss             zero     0x1fff'f068    0x40  fsl_flash.o [5]
+    .bss             zero     0x1fff'f0a8     0x8  fsl_spi.o [5]
+    .bss             zero     0x1fff'f0b0     0x4  fsl_spi.o [5]
+    .bss             zero     0x1fff'f0b4     0x4  fsl_spi.o [5]
+    .bss             zero     0x1fff'f0b8     0xc  fsl_uart.o [5]
+    .bss             zero     0x1fff'f0c4     0x4  fsl_uart.o [5]
+    .bss             zero     0x1fff'f0c8    0x38  main.o [6]
+    .bss             zero     0x1fff'f100   0x800  main.o [6]
+    .bss             zero     0x1fff'f900   0x800  main.o [6]
+    .bss             zero     0x2000'0100     0x4  main.o [6]
+    .bss             zero     0x2000'0104     0x4  main.o [6]
+    .bss             zero     0x2000'0108   0x200  main.o [6]
+    .bss             zero     0x2000'0308     0x8  vac_i2c_soft.o [6]
+    .bss             zero     0x2000'0310    0x64  vac_uart.o [6]
+    .bss             zero     0x2000'0374     0xc  vac_variables.o [6]
+    .bss             zero     0x2000'0380     0x2  fsl_spi.o [5]
+    .bss             zero     0x2000'0382     0x1  main.o [6]
+    .bss             zero     0x2000'0383     0x1  main.o [6]
+    .bss             zero     0x2000'0384     0x1  vac_uart.o [6]
+                            - 0x2000'0388  0x1380
 
 "P6":                                       0x400
   CSTACK                      0x2000'2c00   0x400  <Block>
@@ -272,8 +262,8 @@ Unused ranges:
          From           To      Size
          ----           --      ----
         0x1a0        0x1ff      0x60
-       0x2f86     0x1'ffff  0x1'd07a
-  0x1fff'f380  0x2000'2bff    0x3880
+       0x338e     0x1'ffff  0x1'cc72
+  0x2000'0388  0x2000'2bff    0x2878
 
 
 *******************************************************************************
@@ -283,14 +273,14 @@ Unused ranges:
           Address      Size
           -------      ----
 Zero (__iar_zero_init3)
-    1 destination range, total size 0x375:
-          0x1fff'f008  0x375
+    1 destination range, total size 0x137d:
+          0x1fff'f008  0x137d
 
 Copy (__iar_copy_init3)
     1 source range, total size 0x8:
-               0x2f64    0x8
+               0x336c     0x8
     1 destination range, total size 0x8:
-          0x1fff'f000    0x8
+          0x1fff'f000     0x8
 
 
 
@@ -304,38 +294,38 @@ command line/config:
     ----------------------------------------------
     Total:
 
-C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\board: [1]
+C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\board: [1]
     clock_config.o            92        8
     pin_mux.o                336       24
     ----------------------------------------------
     Total:                   428       32
 
-C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\component\lists: [2]
+C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\component\lists: [2]
     ----------------------------------------------
     Total:
 
-C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\component\uart: [3]
+C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\component\uart: [3]
     ----------------------------------------------
     Total:
 
-C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\device: [4]
+C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\device: [4]
     system_MKE06Z4.o          74        4        4
     ----------------------------------------------
     Total:                    74        4        4
 
-C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\drivers: [5]
-    fsl_clock.o              732       76        8
-    fsl_flash.o              396       40      128
+C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\drivers: [5]
+    fsl_clock.o              732       80        8
+    fsl_flash.o            1'236       40      136
     fsl_ftm.o                762      148
-    fsl_gpio.o               380       80
+    fsl_gpio.o               380       84
     fsl_port.o               116
     fsl_spi.o                892      228       18
-    fsl_uart.o               608      152       16
+    fsl_uart.o               608      156       16
     ----------------------------------------------
-    Total:                 3'886      724      170
+    Total:                 4'726      736      178
 
-C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\source: [6]
-    main.o                   756       56      578
+C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\source: [6]
+    main.o                   936       56    4'674
     vac_flash_spi.o          950
     vac_i2c_soft.o         1'604        6        8
     vac_rs485.o              136
@@ -343,14 +333,14 @@ C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\source: [6]
     vac_uart.o                60               101
     vac_variables.o                             12
     ----------------------------------------------
-    Total:                 3'918      214      699
+    Total:                 4'098      214    4'795
 
-C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\startup: [7]
+C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\startup: [7]
     startup_MKE06Z4.o        336
     ----------------------------------------------
     Total:                   336
 
-C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\utilities: [8]
+C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\utilities: [8]
     fsl_assert.o              28       44
     fsl_debug_console.o    1'010                20
     ----------------------------------------------
@@ -387,7 +377,7 @@ shb_l.a: [11]
 
     Linker created                     36    1'024
 --------------------------------------------------
-    Grand Total:          10'504    1'054    1'917
+    Grand Total:          11'524    1'066    6'021
 
 
 *******************************************************************************
@@ -396,42 +386,42 @@ shb_l.a: [11]
 
 Entry                       Address   Size  Type      Object
 -----                       -------   ----  ----      ------
-.iar.init_table$$Base        0x2d3c          --   Gb  - Linker created -
-.iar.init_table$$Limit       0x2d60          --   Gb  - Linker created -
-?main                        0x2d61         Code  Gb  cmain.o [10]
-BOARD_BootClockRUN           0x2205   0x22  Code  Gb  clock_config.o [1]
-BOARD_InitBootClocks         0x21fd    0x8  Code  Gb  clock_config.o [1]
-BOARD_InitBootPins           0x2095   0x14  Code  Gb  pin_mux.o [1]
-BOARD_flash_spi              0x2117   0x44  Code  Gb  pin_mux.o [1]
-BOARD_gpio_led               0x20a9   0x50  Code  Gb  pin_mux.o [1]
-BOARD_i2c                    0x215b   0x50  Code  Gb  pin_mux.o [1]
-BOARD_rs485                  0x20f9   0x1e  Code  Gb  pin_mux.o [1]
-CLOCK_BootToFeiMode          0x1a39    0xe  Code  Gb  fsl_clock.o [5]
-CLOCK_EnableClock            0x1aa5   0x12  Code  Lc  fsl_ftm.o [5]
-CLOCK_EnableClock            0x13f9   0x12  Code  Lc  fsl_spi.o [5]
-CLOCK_EnableClock            0x2465   0x12  Code  Lc  fsl_uart.o [5]
+.iar.init_table$$Base        0x3144          --   Gb  - Linker created -
+.iar.init_table$$Limit       0x3168          --   Gb  - Linker created -
+?main                        0x3169         Code  Gb  cmain.o [10]
+BOARD_BootClockRUN           0x2491   0x22  Code  Gb  clock_config.o [1]
+BOARD_InitBootClocks         0x2489    0x8  Code  Gb  clock_config.o [1]
+BOARD_InitBootPins           0x2321   0x14  Code  Gb  pin_mux.o [1]
+BOARD_flash_spi              0x23a3   0x44  Code  Gb  pin_mux.o [1]
+BOARD_gpio_led               0x2335   0x50  Code  Gb  pin_mux.o [1]
+BOARD_i2c                    0x23e7   0x50  Code  Gb  pin_mux.o [1]
+BOARD_rs485                  0x2385   0x1e  Code  Gb  pin_mux.o [1]
+CLOCK_BootToFeiMode          0x1f61    0xe  Code  Gb  fsl_clock.o [5]
+CLOCK_EnableClock            0x29c5   0x12  Code  Lc  fsl_ftm.o [5]
+CLOCK_EnableClock            0x1921   0x12  Code  Lc  fsl_spi.o [5]
+CLOCK_EnableClock            0x26f1   0x12  Code  Lc  fsl_uart.o [5]
 CLOCK_GetCoreSysClkFreq
-                             0x1871   0x18  Code  Gb  fsl_clock.o [5]
-CLOCK_GetFlashClkFreq        0x184b   0x26  Code  Gb  fsl_clock.o [5]
+                             0x1d99   0x18  Code  Gb  fsl_clock.o [5]
+CLOCK_GetFlashClkFreq        0x1d73   0x26  Code  Gb  fsl_clock.o [5]
 CLOCK_GetFllExtRefClkFreq
-                             0x17b7   0x4e  Code  Lc  fsl_clock.o [5]
-CLOCK_GetFllFreq             0x196d   0x1a  Code  Gb  fsl_clock.o [5]
-CLOCK_GetFllRefClkFreq       0x1805   0x1e  Code  Lc  fsl_clock.o [5]
-CLOCK_GetFreq                0x18a1   0x66  Code  Gb  fsl_clock.o [5]
-CLOCK_GetICSExtClkFreq       0x179b   0x1c  Code  Lc  fsl_clock.o [5]
+                             0x1cdf   0x4e  Code  Lc  fsl_clock.o [5]
+CLOCK_GetFllFreq             0x1e95   0x1a  Code  Gb  fsl_clock.o [5]
+CLOCK_GetFllRefClkFreq       0x1d2d   0x1e  Code  Lc  fsl_clock.o [5]
+CLOCK_GetFreq                0x1dc9   0x66  Code  Gb  fsl_clock.o [5]
+CLOCK_GetICSExtClkFreq       0x1cc3   0x1c  Code  Lc  fsl_clock.o [5]
 CLOCK_GetICSFixedFreqClkFreq
-                             0x19a5   0x20  Code  Gb  fsl_clock.o [5]
-CLOCK_GetICSOutClkFreq       0x1929   0x44  Code  Gb  fsl_clock.o [5]
+                             0x1ecd   0x20  Code  Gb  fsl_clock.o [5]
+CLOCK_GetICSOutClkFreq       0x1e51   0x44  Code  Gb  fsl_clock.o [5]
 CLOCK_GetInternalRefClkFreq
-                             0x1987   0x14  Code  Gb  fsl_clock.o [5]
-CLOCK_GetOsc0ErClkFreq       0x1823   0x28  Code  Gb  fsl_clock.o [5]
-CLOCK_GetTimerClkFreq        0x1889   0x18  Code  Gb  fsl_clock.o [5]
-CLOCK_SetFeiMode             0x19dd   0x50  Code  Gb  fsl_clock.o [5]
+                             0x1eaf   0x14  Code  Gb  fsl_clock.o [5]
+CLOCK_GetOsc0ErClkFreq       0x1d4b   0x28  Code  Gb  fsl_clock.o [5]
+CLOCK_GetTimerClkFreq        0x1db1   0x18  Code  Gb  fsl_clock.o [5]
+CLOCK_SetFeiMode             0x1f05   0x50  Code  Gb  fsl_clock.o [5]
 CLOCK_SetInternalRefClkConfig
-                             0x21ef    0xe  Code  Lc  clock_config.o [1]
-CLOCK_SetOutDiv              0x1775   0x26  Code  Lc  fsl_clock.o [5]
-CLOCK_SetSimConfig           0x1907   0x22  Code  Gb  fsl_clock.o [5]
-CLOCK_SetSimSafeDivs         0x21e5    0xa  Code  Lc  clock_config.o [1]
+                             0x247b    0xe  Code  Lc  clock_config.o [1]
+CLOCK_SetOutDiv              0x1c9d   0x26  Code  Lc  fsl_clock.o [5]
+CLOCK_SetSimConfig           0x1e2f   0x22  Code  Gb  fsl_clock.o [5]
+CLOCK_SetSimSafeDivs         0x2471    0xa  Code  Lc  clock_config.o [1]
 CSTACK$$Base            0x2000'2c00          --   Gb  - Linker created -
 CSTACK$$Limit           0x2000'3000          --   Gb  - Linker created -
 DbgConsole_ConvertRadixNumToString
@@ -443,68 +433,70 @@ DbgConsole_PrintfPaddingCharacter
                               0xca5   0x22  Code  Lc  fsl_debug_console.o [8]
 DbgConsole_Putchar            0xc7f   0x1c  Code  Gb  fsl_debug_console.o [8]
 DbgConsole_Vprintf            0xc5d   0x22  Code  Gb  fsl_debug_console.o [8]
-EnableIRQ                    0x23f9   0x24  Code  Lc  vac_rs485.o [6]
-EnableIRQ                    0x2259   0x24  Code  Lc  vac_timer.o [6]
-FLASH_Init                   0x26c5   0xa4  Code  Gb  fsl_flash.o [5]
+EnableIRQ                    0x2685   0x24  Code  Lc  vac_rs485.o [6]
+EnableIRQ                    0x24e5   0x24  Code  Lc  vac_timer.o [6]
+FLASH_Erase                  0x1113   0xbc  Code  Gb  fsl_flash.o [5]
+FLASH_Init                   0x1045   0xa4  Code  Gb  fsl_flash.o [5]
 FLASH_PrepareExecuteInRamFunctions
-                             0x2769   0x2a  Code  Gb  fsl_flash.o [5]
-FLASH_SetProperty            0x27a9   0x46  Code  Gb  fsl_flash.o [5]
-FTM2_IRQHandler              0x23a5   0x18  Code  Gb  vac_timer.o [6]
+                             0x10e9   0x2a  Code  Gb  fsl_flash.o [5]
+FLASH_Program                0x11cf   0xe2  Code  Gb  fsl_flash.o [5]
+FLASH_SetProperty            0x12c9   0x46  Code  Gb  fsl_flash.o [5]
+FTM2_IRQHandler              0x2631   0x18  Code  Gb  vac_timer.o [6]
 FTM_CalculateCounterClkDiv
-                             0x227d   0x62  Code  Lc  vac_timer.o [6]
-FTM_ClearStatusFlags         0x1d6f   0x30  Code  Gb  fsl_ftm.o [5]
-FTM_EnableInterrupts         0x1d25   0x4a  Code  Gb  fsl_ftm.o [5]
-FTM_GetDefaultConfig         0x1cab   0x54  Code  Gb  fsl_ftm.o [5]
-FTM_GetInstance              0x1ab7   0x32  Code  Lc  fsl_ftm.o [5]
-FTM_Init                     0x1c07   0xa4  Code  Gb  fsl_ftm.o [5]
-FTM_SetPwmSync               0x1ae9   0x86  Code  Lc  fsl_ftm.o [5]
-FTM_SetReloadPoints          0x1b6f   0x98  Code  Lc  fsl_ftm.o [5]
-FTM_SetTimerPeriod           0x22df    0x8  Code  Lc  vac_timer.o [6]
-FTM_StartTimer               0x22e7   0x1a  Code  Lc  vac_timer.o [6]
+                             0x2509   0x62  Code  Lc  vac_timer.o [6]
+FTM_ClearStatusFlags         0x2c8f   0x30  Code  Gb  fsl_ftm.o [5]
+FTM_EnableInterrupts         0x2c45   0x4a  Code  Gb  fsl_ftm.o [5]
+FTM_GetDefaultConfig         0x2bcb   0x54  Code  Gb  fsl_ftm.o [5]
+FTM_GetInstance              0x29d7   0x32  Code  Lc  fsl_ftm.o [5]
+FTM_Init                     0x2b27   0xa4  Code  Gb  fsl_ftm.o [5]
+FTM_SetPwmSync               0x2a09   0x86  Code  Lc  fsl_ftm.o [5]
+FTM_SetReloadPoints          0x2a8f   0x98  Code  Lc  fsl_ftm.o [5]
+FTM_SetTimerPeriod           0x256b    0x8  Code  Lc  vac_timer.o [6]
+FTM_StartTimer               0x2573   0x1a  Code  Lc  vac_timer.o [6]
 GPIO_PinInit                  0xa55   0xc0  Code  Gb  fsl_gpio.o [5]
 GPIO_PinRead                  0xb91   0x32  Code  Gb  fsl_gpio.o [5]
 GPIO_PinWrite                 0xb15   0x54  Code  Gb  fsl_gpio.o [5]
 GPIO_PortToggle               0xb69   0x28  Code  Gb  fsl_gpio.o [5]
-PORT_SetPinSelect            0x2851   0x62  Code  Gb  fsl_port.o [5]
+PORT_SetPinSelect            0x2951   0x62  Code  Gb  fsl_port.o [5]
 RW$$Base                0x1fff'f000          --   Gb  - Linker created -
 RW$$Limit               0x1fff'f008          --   Gb  - Linker created -
-Region$$Table$$Base          0x2d3c          --   Gb  - Linker created -
-Region$$Table$$Limit         0x2d60          --   Gb  - Linker created -
-Reset_Handler                0x2ced         Code  Wk  startup_MKE06Z4.o [7]
-SPI0_DriverIRQHandler        0x1705   0x22  Code  Gb  fsl_spi.o [5]
-SPI1_DriverIRQHandler        0x1729   0x22  Code  Gb  fsl_spi.o [5]
-SPI_CommonIRQHandler         0x16d5   0x30  Code  Lc  fsl_spi.o [5]
-SPI_GetInstance              0x140b   0x30  Code  Gb  fsl_spi.o [5]
+Region$$Table$$Base          0x3144          --   Gb  - Linker created -
+Region$$Table$$Limit         0x3168          --   Gb  - Linker created -
+Reset_Handler                0x30f5         Code  Wk  startup_MKE06Z4.o [7]
+SPI0_DriverIRQHandler        0x1c2d   0x22  Code  Gb  fsl_spi.o [5]
+SPI1_DriverIRQHandler        0x1c51   0x22  Code  Gb  fsl_spi.o [5]
+SPI_CommonIRQHandler         0x1bfd   0x30  Code  Lc  fsl_spi.o [5]
+SPI_GetInstance              0x1933   0x30  Code  Gb  fsl_spi.o [5]
 SPI_MasterGetDefaultConfig
-                             0x14ab   0x36  Code  Gb  fsl_spi.o [5]
-SPI_MasterInit               0x14e1   0xba  Code  Gb  fsl_spi.o [5]
-SPI_MasterSetBaudRate        0x15b5   0x7e  Code  Gb  fsl_spi.o [5]
+                             0x19d3   0x36  Code  Gb  fsl_spi.o [5]
+SPI_MasterInit               0x1a09   0xba  Code  Gb  fsl_spi.o [5]
+SPI_MasterSetBaudRate        0x1add   0x7e  Code  Gb  fsl_spi.o [5]
 SPI_MasterTransferBlocking
-                             0x163d   0x86  Code  Gb  fsl_spi.o [5]
-SPI_ReadData                 0x1633    0xa  Code  Gb  fsl_spi.o [5]
-SPI_ReadNonBlocking          0x147f   0x2c  Code  Lc  fsl_spi.o [5]
-SPI_SetDummyData             0x143b   0x12  Code  Gb  fsl_spi.o [5]
-SPI_WriteNonBlocking         0x144d   0x32  Code  Lc  fsl_spi.o [5]
-SysTick_Config               0x1e2d   0x32  Code  Lc  main.o [6]
-SysTick_DelayTicks           0x1e71    0xe  Code  Gb  main.o [6]
-SysTick_Handler              0x1e5f   0x12  Code  Gb  main.o [6]
+                             0x1b65   0x86  Code  Gb  fsl_spi.o [5]
+SPI_ReadData                 0x1b5b    0xa  Code  Gb  fsl_spi.o [5]
+SPI_ReadNonBlocking          0x19a7   0x2c  Code  Lc  fsl_spi.o [5]
+SPI_SetDummyData             0x1963   0x12  Code  Gb  fsl_spi.o [5]
+SPI_WriteNonBlocking         0x1975   0x32  Code  Lc  fsl_spi.o [5]
+SysTick_Config               0x2005   0x32  Code  Lc  main.o [6]
+SysTick_DelayTicks           0x2049    0xe  Code  Gb  main.o [6]
+SysTick_Handler              0x2037   0x12  Code  Gb  main.o [6]
 SystemCoreClock         0x1fff'f004    0x4  Data  Gb  system_MKE06Z4.o [4]
-SystemInit                   0x2979   0x2c  Code  Gb  system_MKE06Z4.o [4]
-UART0_DriverIRQHandler       0x2691   0x10  Code  Gb  fsl_uart.o [5]
-UART1_DriverIRQHandler       0x26a3   0x10  Code  Gb  fsl_uart.o [5]
-UART2_IRQHandler             0x2b6d   0x2a  Code  Gb  vac_uart.o [6]
-UART_EnableInterrupts        0x2629   0x20  Code  Gb  fsl_uart.o [5]
-UART_GetDefaultConfig        0x25d7   0x44  Code  Gb  fsl_uart.o [5]
-UART_GetInstance             0x2477   0x32  Code  Gb  fsl_uart.o [5]
-UART_GetStatusFlags          0x264d    0xc  Code  Gb  fsl_uart.o [5]
-UART_Init                    0x24a9  0x12e  Code  Gb  fsl_uart.o [5]
-UART_ReadByte                0x2b69    0x4  Code  Lc  vac_uart.o [6]
-UART_WriteBlocking           0x2661   0x24  Code  Gb  fsl_uart.o [5]
+SystemInit                   0x2d75   0x2c  Code  Gb  system_MKE06Z4.o [4]
+UART0_DriverIRQHandler       0x291d   0x10  Code  Gb  fsl_uart.o [5]
+UART1_DriverIRQHandler       0x292f   0x10  Code  Gb  fsl_uart.o [5]
+UART2_IRQHandler             0x2f75   0x2a  Code  Gb  vac_uart.o [6]
+UART_EnableInterrupts        0x28b5   0x20  Code  Gb  fsl_uart.o [5]
+UART_GetDefaultConfig        0x2863   0x44  Code  Gb  fsl_uart.o [5]
+UART_GetInstance             0x2703   0x32  Code  Gb  fsl_uart.o [5]
+UART_GetStatusFlags          0x28d9    0xc  Code  Gb  fsl_uart.o [5]
+UART_Init                    0x2735  0x12e  Code  Gb  fsl_uart.o [5]
+UART_ReadByte                0x2f71    0x4  Code  Lc  vac_uart.o [6]
+UART_WriteBlocking           0x28ed   0x24  Code  Gb  fsl_uart.o [5]
 ZI$$Base                0x1fff'f008          --   Gb  - Linker created -
-ZI$$Limit               0x1fff'f380          --   Gb  - Linker created -
-__NVIC_EnableIRQ             0x23dd   0x18  Code  Lc  vac_rs485.o [6]
-__NVIC_EnableIRQ             0x2241   0x18  Code  Lc  vac_timer.o [6]
-__NVIC_SetPriority           0x1da1   0x8c  Code  Lc  main.o [6]
+ZI$$Limit               0x2000'0388          --   Gb  - Linker created -
+__NVIC_EnableIRQ             0x2669   0x18  Code  Lc  vac_rs485.o [6]
+__NVIC_EnableIRQ             0x24cd   0x18  Code  Lc  vac_timer.o [6]
+__NVIC_SetPriority           0x1f79   0x8c  Code  Lc  main.o [6]
 __Vectors                       0x0          --   Gb  startup_MKE06Z4.o [7]
 __Vectors_End                  0xc0         Data  Gb  startup_MKE06Z4.o [7]
 __Vectors_Size {Abs}           0xc0          --   Gb  startup_MKE06Z4.o [7]
@@ -512,57 +504,74 @@ __aeabi_assert                0xc21   0x1c  Code  Gb  fsl_assert.o [8]
 __aeabi_idiv                   0xed         Code  Gb  I32DivModFast.o [10]
 __aeabi_idiv0                 0xc3d         Code  Gb  IntDivZer.o [10]
 __aeabi_idivmod                0xed         Code  Gb  I32DivModFast.o [10]
-__aeabi_ldiv0                0x2975         Code  Gb  I64DivZer.o [10]
-__aeabi_lmul                 0x28c5         Code  Gb  I64Mul.o [10]
-__aeabi_memclr4              0x1a71         Code  Gb  ABImemset.o [10]
-__aeabi_memclr8              0x1a71         Code  Gb  ABImemset.o [10]
+__aeabi_ldiv0                0x2d71         Code  Gb  I64DivZer.o [10]
+__aeabi_lmul                 0x2cc1         Code  Gb  I64Mul.o [10]
+__aeabi_memclr4              0x1539         Code  Gb  ABImemset.o [10]
+__aeabi_memclr8              0x1539         Code  Gb  ABImemset.o [10]
 __aeabi_memcpy                0xc05         Code  Gb  ABImemcpy.o [10]
 __aeabi_memcpy4               0xbd1         Code  Gb  ABImemcpy.o [10]
 __aeabi_memcpy8               0xbd1         Code  Gb  ABImemcpy.o [10]
-__aeabi_memset               0x1a51         Code  Gb  ABImemset.o [10]
+__aeabi_memset               0x1519         Code  Gb  ABImemset.o [10]
 __aeabi_uidiv                  0xf3         Code  Gb  I32DivModFast.o [10]
 __aeabi_uidivmod               0xf3         Code  Gb  I32DivModFast.o [10]
-__aeabi_uldivmod             0x28f7         Code  Gb  I64DivMod.o [10]
-__cmain                      0x2d61         Code  Gb  cmain.o [10]
-__exit                       0x2d99   0x14  Code  Gb  exit.o [11]
+__aeabi_uldivmod             0x2cf3         Code  Gb  I64DivMod.o [10]
+__cmain                      0x3169         Code  Gb  cmain.o [10]
+__exit                       0x31a1   0x14  Code  Gb  exit.o [11]
 __iar_Memcpy                  0xc11         Code  Gb  ABImemcpy.o [10]
-__iar_Memset4_word           0x1a75         Code  Gb  ABImemset.o [10]
-__iar_Memset_word            0x1a5d         Code  Gb  ABImemset.o [10]
-__iar_copy_init3             0x2c15   0x30  Code  Gb  copy_init3.o [10]
-__iar_data_init3             0x2d15   0x28  Code  Gb  data_init.o [10]
-__iar_program_start          0x2e1d         Code  Gb  cstartup_M.o [10]
-__iar_zero_init3             0x2ba5   0x3c  Code  Gb  zero_init3.o [10]
-__low_level_init             0x2d7f    0x4  Code  Gb  low_level_init.o [9]
+__iar_Memset4_word           0x153d         Code  Gb  ABImemset.o [10]
+__iar_Memset_word            0x1525         Code  Gb  ABImemset.o [10]
+__iar_copy_init3             0x301d   0x30  Code  Gb  copy_init3.o [10]
+__iar_data_init3             0x311d   0x28  Code  Gb  data_init.o [10]
+__iar_program_start          0x3225         Code  Gb  cstartup_M.o [10]
+__iar_zero_init3             0x2fad   0x3c  Code  Gb  zero_init3.o [10]
+__low_level_init             0x3187    0x4  Code  Gb  low_level_init.o [9]
 __vector_table                  0x0         Data  Gb  startup_MKE06Z4.o [7]
 __vector_table_0x1c            0x1c         Data  Gb  startup_MKE06Z4.o [7]
-_call_main                   0x2d6d         Code  Gb  cmain.o [10]
-_exit                        0x2d8d         Code  Gb  cexit.o [10]
+_call_main                   0x3175         Code  Gb  cmain.o [10]
+_exit                        0x3195         Code  Gb  cexit.o [10]
 bcd2dec                       0x50b   0x28  Code  Gb  vac_i2c_soft.o [6]
-buf_test                0x1fff'f308   0x64  Data  Gb  vac_uart.o [6]
-buff_cnt                0x1fff'f37c    0x1  Data  Gb  vac_uart.o [6]
-buff_read               0x1fff'f100  0x200  Data  Gb  main.o [6]
+buf_test                0x2000'0310   0x64  Data  Gb  vac_uart.o [6]
+buff_cnt                0x2000'0384    0x1  Data  Gb  vac_uart.o [6]
+buff_read               0x2000'0108  0x200  Data  Gb  main.o [6]
+cal_addr_sector              0x230d   0x10  Code  Gb  main.o [6]
+callFlashCommonBitOperation
+                        0x1fff'f024    0x4  Data  Lc  fsl_flash.o [5]
+callFlashRunCommand     0x1fff'f020    0x4  Data  Lc  fsl_flash.o [5]
 copy_flash_common_bit_operation
-                             0x2809   0x1e  Code  Lc  fsl_flash.o [5]
-copy_flash_run_command       0x27ef   0x1a  Code  Lc  fsl_flash.o [5]
-error_trap                   0x2039    0xa  Code  Lc  main.o [6]
-exit                         0x2d83    0x8  Code  Gb  exit.o [9]
+                             0x13cf   0x1e  Code  Lc  fsl_flash.o [5]
+copy_flash_run_command       0x130f   0x1a  Code  Lc  fsl_flash.o [5]
+error_trap                   0x22ab    0xa  Code  Lc  main.o [6]
+exit                         0x318b    0x8  Code  Gb  exit.o [9]
+flash_cache_clear            0x1407    0xe  Code  Gb  fsl_flash.o [5]
+flash_cache_clear_process
+                             0x1415   0x22  Code  Lc  fsl_flash.o [5]
 flash_check_execute_in_ram_function_info
-                             0x2827   0x22  Code  Lc  fsl_flash.o [5]
-flash_chip_select_spi1       0x1081   0x38  Code  Lc  vac_flash_spi.o [6]
-flash_erase_sector           0x1141   0x4e  Code  Gb  vac_flash_spi.o [6]
-flash_read_buffer            0x1395   0x64  Code  Gb  vac_flash_spi.o [6]
+                             0x1437   0x22  Code  Lc  fsl_flash.o [5]
+flash_check_range            0x1459   0x3a  Code  Lc  fsl_flash.o [5]
+flash_check_user_key         0x14df   0x12  Code  Lc  fsl_flash.o [5]
+flash_chip_select_spi1       0x15a9   0x38  Code  Lc  vac_flash_spi.o [6]
+flash_command_sequence       0x1345   0x54  Code  Lc  fsl_flash.o [5]
+flash_common_bit_operation_command_sequence
+                             0x1399   0x36  Code  Lc  fsl_flash.o [5]
+flash_erase_sector           0x1669   0x4e  Code  Gb  vac_flash_spi.o [6]
+flash_get_matched_operation_info
+                             0x1493   0x4c  Code  Lc  fsl_flash.o [5]
+flash_read                   0x231d    0x4  Code  Gb  main.o [6]
+flash_read_buffer            0x18bd   0x64  Code  Gb  vac_flash_spi.o [6]
+flash_set_command            0x1329   0x1c  Code  Gb  fsl_flash.o [5]
 flash_wait_for_write_end
-                             0x1109   0x38  Code  Lc  vac_flash_spi.o [6]
-flash_write_buffer           0x11ff  0x196  Code  Gb  vac_flash_spi.o [6]
-flash_write_byte             0x10b9   0x30  Code  Lc  vac_flash_spi.o [6]
-flash_write_enable           0x10e9   0x20  Code  Lc  vac_flash_spi.o [6]
-flash_write_page             0x118f   0x70  Code  Gb  vac_flash_spi.o [6]
-ftm_isr_flag            0x1fff'f37a    0x1  Data  Gb  main.o [6]
-g_spiDummyData          0x1fff'f378    0x2  Data  Gb  fsl_spi.o [5]
-g_systickCounter        0x1fff'f0fc    0x4  Data  Gb  main.o [6]
+                             0x1631   0x38  Code  Lc  vac_flash_spi.o [6]
+flash_write_buffer           0x1727  0x196  Code  Gb  vac_flash_spi.o [6]
+flash_write_byte             0x15e1   0x30  Code  Lc  vac_flash_spi.o [6]
+flash_write_enable           0x1611   0x20  Code  Lc  vac_flash_spi.o [6]
+flash_write_page             0x16b7   0x70  Code  Gb  vac_flash_spi.o [6]
+ftm_isr_flag            0x2000'0382    0x1  Data  Gb  main.o [6]
+g_fault_flag            0x2000'0100    0x4  Data  Gb  main.o [6]
+g_spiDummyData          0x2000'0380    0x2  Data  Gb  fsl_spi.o [5]
+g_systickCounter        0x2000'0104    0x4  Data  Gb  main.o [6]
 g_xtal0Freq             0x1fff'f008    0x4  Data  Gb  fsl_clock.o [5]
 get_time_rtc                  0x893  0x14c  Code  Gb  vac_i2c_soft.o [6]
-hardwawre_init               0x1f0b    0xc  Code  Lc  main.o [6]
+hardwawre_init               0x20e3    0xc  Code  Lc  main.o [6]
 i2c_delay_us                  0x4f1   0x1a  Code  Lc  vac_i2c_soft.o [6]
 i2c_init                      0x533   0x3c  Code  Gb  vac_i2c_soft.o [6]
 i2c_read                      0x6ab   0xca  Code  Gb  vac_i2c_soft.o [6]
@@ -577,66 +586,68 @@ i2c_start                     0x56f   0x5e  Code  Gb  vac_i2c_soft.o [6]
 i2c_stop                      0x5cd   0x4e  Code  Gb  vac_i2c_soft.o [6]
 i2c_write                     0x61b   0x90  Code  Gb  vac_i2c_soft.o [6]
 icsConfig_BOARD_BootClockRUN
-                             0x2f6c    0x4  Data  Gb  clock_config.o [1]
-init_flash                   0x1043   0x3e  Code  Gb  vac_flash_spi.o [6]
-init_rs485                   0x241d   0x48  Code  Gb  vac_rs485.o [6]
+                             0x3374    0x4  Data  Gb  clock_config.o [1]
+init_flash                   0x156b   0x3e  Code  Gb  vac_flash_spi.o [6]
+init_rs485                   0x26a9   0x48  Code  Gb  vac_rs485.o [6]
 init_rtc                      0xa23   0x32  Code  Gb  vac_i2c_soft.o [6]
-init_timer                   0x2301   0xa4  Code  Gb  vac_timer.o [6]
-main                         0x1e7f   0x8c  Code  Gb  main.o [6]
-main_test               0x1fff'f37b    0x1  Data  Gb  main.o [6]
+init_timer                   0x258d   0xa4  Code  Gb  vac_timer.o [6]
+main                         0x2057   0x8c  Code  Gb  main.o [6]
+main_test               0x2000'0383    0x1  Data  Gb  main.o [6]
+mcm_flash_cache_clear        0x13ed   0x1a  Code  Gb  fsl_flash.o [5]
 read_rtc                      0x775   0xa6  Code  Gb  vac_i2c_soft.o [6]
-result                  0x1fff'f0f8    0x4  Data  Gb  main.o [6]
-rtc_DS3231              0x1fff'f300    0x8  Data  Gb  vac_i2c_soft.o [6]
+rtc_DS3231              0x2000'0308    0x8  Data  Gb  vac_i2c_soft.o [6]
 rtc_enable_charge             0x9df   0x44  Code  Lc  vac_i2c_soft.o [6]
+s_buffer                0x1fff'f100  0x800  Data  Lc  main.o [6]
+s_buffer_rbc            0x1fff'f900  0x800  Data  Lc  main.o [6]
 s_debugConsole          0x1fff'f00c   0x14  Data  Lc  fsl_debug_console.o [8]
 s_flashCommonBitOperation
-                        0x1fff'f060   0x40  Data  Lc  fsl_flash.o [5]
+                        0x1fff'f068   0x40  Data  Lc  fsl_flash.o [5]
 s_flashCommonBitOperationFunctionCode
-                             0x2dac   0x1c  Data  Lc  fsl_flash.o [5]
-s_flashDriver           0x1fff'f0c0   0x38  Data  Gb  main.o [6]
-s_flashRunCommand       0x1fff'f020   0x40  Data  Lc  fsl_flash.o [5]
+                             0x31b4   0x1c  Data  Lc  fsl_flash.o [5]
+s_flashDriver           0x1fff'f0c8   0x38  Data  Gb  main.o [6]
+s_flashRunCommand       0x1fff'f028   0x40  Data  Lc  fsl_flash.o [5]
 s_flashRunCommandFunctionCode
-                             0x2e7c    0xc  Data  Lc  fsl_flash.o [5]
-s_ftmBases                   0x2e94    0xc  Data  Lc  fsl_ftm.o [5]
-s_ftmClocks                  0x2ea0    0xc  Data  Lc  fsl_ftm.o [5]
-s_gpioBases                  0x2eac    0xc  Data  Lc  fsl_gpio.o [5]
+                             0x3284    0xc  Data  Lc  fsl_flash.o [5]
+s_ftmBases                   0x329c    0xc  Data  Lc  fsl_ftm.o [5]
+s_ftmClocks                  0x32a8    0xc  Data  Lc  fsl_ftm.o [5]
+s_gpioBases                  0x32b4    0xc  Data  Lc  fsl_gpio.o [5]
 s_slowIrcFreq           0x1fff'f000    0x4  Data  Lc  fsl_clock.o [5]
-s_spiBases                   0x2f04    0x8  Data  Lc  fsl_spi.o [5]
-s_spiClock                   0x2f0c    0x8  Data  Lc  fsl_spi.o [5]
-s_spiHandle             0x1fff'f0a0    0x8  Data  Lc  fsl_spi.o [5]
-s_spiMasterIsr          0x1fff'f0a8    0x4  Data  Lc  fsl_spi.o [5]
-s_spiSlaveIsr           0x1fff'f0ac    0x4  Data  Lc  fsl_spi.o [5]
-s_uartBases                  0x2ed0    0xc  Data  Lc  fsl_uart.o [5]
-s_uartClock                  0x2edc    0xc  Data  Lc  fsl_uart.o [5]
-s_uartHandle            0x1fff'f0b0    0xc  Data  Gb  fsl_uart.o [5]
-s_uartIsr               0x1fff'f0bc    0x4  Data  Gb  fsl_uart.o [5]
+s_spiBases                   0x330c    0x8  Data  Lc  fsl_spi.o [5]
+s_spiClock                   0x3314    0x8  Data  Lc  fsl_spi.o [5]
+s_spiHandle             0x1fff'f0a8    0x8  Data  Lc  fsl_spi.o [5]
+s_spiMasterIsr          0x1fff'f0b0    0x4  Data  Lc  fsl_spi.o [5]
+s_spiSlaveIsr           0x1fff'f0b4    0x4  Data  Lc  fsl_spi.o [5]
+s_uartBases                  0x32d8    0xc  Data  Lc  fsl_uart.o [5]
+s_uartClock                  0x32e4    0xc  Data  Lc  fsl_uart.o [5]
+s_uartHandle            0x1fff'f0b8    0xc  Data  Gb  fsl_uart.o [5]
+s_uartIsr               0x1fff'f0c4    0x4  Data  Gb  fsl_uart.o [5]
 simConfig_BOARD_BootClockRUN
-                             0x2f70    0x4  Data  Gb  clock_config.o [1]
-software_init                0x1f17   0x30  Code  Lc  main.o [6]
+                             0x3378    0x4  Data  Gb  clock_config.o [1]
+software_init                0x20ef   0x30  Code  Lc  main.o [6]
 strlen                       0x1035         Code  Gb  strlen.o [10]
-sys_boot                     0x2003   0x34  Code  Lc  main.o [6]
-sys_control                  0x1f6b   0x98  Code  Lc  main.o [6]
-sys_get_rtc                  0x1f47   0x24  Code  Lc  main.o [6]
-sys_jumpApp                  0x2037    0x2  Code  Gb  main.o [6]
-system_var              0x1fff'f36c    0xc  Data  Gb  vac_variables.o [6]
+sys_boot                     0x21e1   0xc8  Code  Lc  main.o [6]
+sys_control                  0x2143   0x98  Code  Lc  main.o [6]
+sys_get_rtc                  0x211f   0x24  Code  Lc  main.o [6]
+sys_jumpApp                  0x22a9    0x2  Code  Gb  main.o [6]
+system_var              0x2000'0374    0xc  Data  Gb  vac_variables.o [6]
 write_rtc                     0x81b   0x78  Code  Gb  vac_i2c_soft.o [6]
 
 
-[1] = C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\board
-[2] = C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\component\lists
-[3] = C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\component\uart
-[4] = C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\device
-[5] = C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\drivers
-[6] = C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\source
-[7] = C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\startup
-[8] = C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\obj\utilities
+[1] = C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\board
+[2] = C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\component\lists
+[3] = C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\component\uart
+[4] = C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\device
+[5] = C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\drivers
+[6] = C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\source
+[7] = C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\startup
+[8] = C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\obj\utilities
 [9] = dl6M_tln.a
 [10] = rt6M_tl.a
 [11] = shb_l.a
 
-  10'504 bytes of readonly  code memory
-   1'054 bytes of readonly  data memory
-   1'917 bytes of readwrite data memory
+  11'524 bytes of readonly  code memory
+   1'066 bytes of readonly  data memory
+   6'021 bytes of readwrite data memory
 
 Errors: none
 Warnings: none

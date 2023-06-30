@@ -18,16 +18,23 @@ static void sys_control(void);
 
 //nampt
 #define pflashSectorSize 512 
-
+#define pflashTotalSize FSL_FEATURE_FLASH_PFLASH_BLOCK_SIZE
+#define pflashBlockBase FSL_FEATURE_FLASH_PFLASH_START_ADDRESS
 #define Start_Add_FLASH_EX 0x600000
-void sys_jumpApp(void);
+#define BUFFER_LEN 512
+/*config flash*/
 flash_config_t s_flashDriver;
+
+void sys_jumpApp(void);
 static void sys_boot(void);
 static void error_trap(void);
+static uint32_t s_buffer[BUFFER_LEN];
+static uint32_t s_buffer_rbc[BUFFER_LEN];
 
+uint32_t flash_read(uint32_t add);
 uint8_t g_sector_index;
 uint32_t cal_addr_sector(uint8_t sector_index);
-
+uint32_t g_fault_flag;
 /*******************************************************************************
  * Prototypes
  ******************************************************************************/
@@ -84,7 +91,6 @@ int main(void)
     ///2. timer 50ms ===========================================================
     while (1)
     {
-        
         if (ftm_isr_flag)
         {
           p_sys_var->sys_cnt++;
@@ -97,16 +103,12 @@ int main(void)
     }
     ///3. ======================================================================
 }
-
-
-
 ///1. hardwawre_init============================================================
 static void hardwawre_init(void){
   /* Init board hardware. */
   BOARD_InitBootPins();
   BOARD_InitBootClocks();
 }
-
 ///2.software_init==============================================================
 static void software_init(void){
   init_timer(USER_FTM2_BASEADDR,USER_FTM2_IRQ_NUM,TIMER_PERIOD_MS);
@@ -114,11 +116,9 @@ static void software_init(void){
   init_flash(USER_SPI1_MASTER);
   init_rtc(RTC_SDA_PORT,RTC_SDA_PIN,RTC_SCL_PORT,RTC_SCL_PIN,MS);
 }
-
 static void sys_get_rtc(ST_TIME_FORMAT *p_get_rtc){
   *p_get_rtc = get_time_rtc(RTC_SDA_PORT,RTC_SDA_PIN,RTC_SCL_PORT,RTC_SCL_PIN,MS);
 }
-
 ///3. sys_control===============================================================
 uint8_t  main_test = 0; 
 #define  TEST "thanhcm33"
@@ -158,6 +158,7 @@ static void sys_control(void){
 //nampt
 static void sys_boot(void){
   uint32_t result;
+  uint32_t addrr=0;
   memset(&s_flashDriver,0,sizeof(s_flashDriver));
   FLASH_SetProperty(&s_flashDriver,kFLASH_PropertyFlashClockFrequency, 20000000U);
   result = FLASH_Init(&s_flashDriver);
@@ -171,7 +172,28 @@ static void sys_boot(void){
     {
         error_trap();
     }
-  
+  //ghi data vao flash sector thu 6
+  for (int i = 0; i < BUFFER_LEN; i++)
+    {
+        s_buffer[i] = i;
+    }
+  result = FLASH_Program(&s_flashDriver, cal_addr_sector(6), s_buffer, sizeof(s_buffer));
+    if (kStatus_FLASH_Success != result)
+    {
+        error_trap();
+    }
+    
+    for(uint32_t index1 = 0;index1<BUFFER_LEN;index1++){
+      addrr = cal_addr_sector(6)+index1*4;
+      s_buffer_rbc[index1]= flash_read(addrr);
+      if (s_buffer_rbc[index1] != s_buffer[index1])
+        {
+            g_fault_flag = 11;
+            error_trap();
+        }
+    }
+    
+
 }
 void sys_jumpApp(void){
   
@@ -190,7 +212,9 @@ uint32_t cal_addr_sector(uint8_t sector_index){
   return retval;
 }
 
-
+uint32_t flash_read(uint32_t add){
+  *(volatile uint32_t *)(add);
+}
 
 
 

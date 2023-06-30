@@ -23,9 +23,9 @@
 
 if ($debugfile -eq "")
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "C:\Users\Admin M1\Desktop\CodeNampt\BLD\settings\APP_VAC_5G.debug.general.xcl" --backend -f "C:\Users\Admin M1\Desktop\CodeNampt\BLD\settings\APP_VAC_5G.debug.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "C:\Users\phamt\Desktop\CODE\BootloaderVAC\settings\APP_VAC_5G.debug.general.xcl" --backend -f "C:\Users\phamt\Desktop\CODE\BootloaderVAC\settings\APP_VAC_5G.debug.driver.xcl" 
 }
 else
 {
-& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "C:\Users\Admin M1\Desktop\CodeNampt\BLD\settings\APP_VAC_5G.debug.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\Admin M1\Desktop\CodeNampt\BLD\settings\APP_VAC_5G.debug.driver.xcl" 
+& "C:\Program Files\IAR Systems\Embedded Workbench 9.0\common\bin\cspybat" -f "C:\Users\phamt\Desktop\CODE\BootloaderVAC\settings\APP_VAC_5G.debug.general.xcl" --debug_file=$debugfile --backend -f "C:\Users\phamt\Desktop\CODE\BootloaderVAC\settings\APP_VAC_5G.debug.driver.xcl" 
 }

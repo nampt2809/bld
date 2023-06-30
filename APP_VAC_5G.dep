@@ -5,206 +5,133 @@
     <configuration>
         <name>debug</name>
         <outputs>
-            <file>$PROJ_DIR$\board\board.c</file>
-            <file>$PROJ_DIR$\board\board.h</file>
-            <file>$PROJ_DIR$\board\clock_config.c</file>
             <file>$PROJ_DIR$\board\clock_config.h</file>
             <file>$PROJ_DIR$\board\pin_mux.c</file>
-            <file>$PROJ_DIR$\board\pin_mux.h</file>
-            <file>$PROJ_DIR$\debug\app_vac_5g.out</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_float_setup.h</file>
-            <file>$PROJ_DIR$\debug\obj\source\vac_flash_spi.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\aarch32\iccarm_builtin.h</file>
-            <file>$PROJ_DIR$\debug\obj\drivers\fsl_ftm.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
-            <file>$PROJ_DIR$\debug\obj\source\vac_uart.o</file>
-            <file>$PROJ_DIR$\debug\obj\device\system_MKE06Z4.o</file>
-            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
-            <file>$PROJ_DIR$\debug\obj\utilities\fsl_assert.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
-            <file>$PROJ_DIR$\debug\obj\component\uart\fsl_adapter_uart.o</file>
-            <file>$PROJ_DIR$\debug\obj\utilities\fsl_debug_console.o</file>
-            <file>$PROJ_DIR$\debug\obj\drivers\fsl_clock.o</file>
+            <file>$PROJ_DIR$\board\board.h</file>
+            <file>$PROJ_DIR$\board\clock_config.c</file>
+            <file>$PROJ_DIR$\board\board.c</file>
             <file>$TOOLKIT_DIR$\inc\c\math.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
-            <file>$PROJ_DIR$\debug\obj\component\lists\fsl_component_generic_list.o</file>
-            <file>$PROJ_DIR$\debug\obj\source\vac_timer.o</file>
-            <file>$PROJ_DIR$\debug\obj\drivers\fsl_common.o</file>
-            <file>$PROJ_DIR$\debug\obj\drivers\fsl_common_arm.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
-            <file>$PROJ_DIR$\debug\obj\drivers\fsl_flash.o</file>
-            <file>$PROJ_DIR$\component\uart\fsl_adapter_uart.c</file>
-            <file>$PROJ_DIR$\device\fsl_device_registers.h</file>
-            <file>$PROJ_DIR$\device\MKE06Z4_features.h</file>
-            <file>$PROJ_DIR$\device\system_MKE06Z4.c</file>
-            <file>$PROJ_DIR$\device\system_MKE06Z4.h</file>
-            <file>$PROJ_DIR$\component\uart\fsl_adapter_uart.h</file>
-            <file>$PROJ_DIR$\device\MKE06Z4.h</file>
-            <file>$PROJ_DIR$\drivers\fsl_clock.c</file>
-            <file>$PROJ_DIR$\CMSIS\cmsis_version.h</file>
-            <file>$PROJ_DIR$\drivers\fsl_clock.h</file>
-            <file>$PROJ_DIR$\drivers\fsl_common.c</file>
-            <file>$PROJ_DIR$\CMSIS\cmsis_iccarm.h</file>
-            <file>$PROJ_DIR$\component\lists\fsl_component_generic_list.h</file>
-            <file>$PROJ_DIR$\CMSIS\cmsis_compiler.h</file>
-            <file>$PROJ_DIR$\CMSIS\core_cm0plus.h</file>
-            <file>$PROJ_DIR$\component\lists\fsl_component_generic_list.c</file>
-            <file>$PROJ_DIR$\source\vac_flash_spi.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_flash.h</file>
-            <file>$PROJ_DIR$\drivers\fsl_ftm.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_common_arm.h</file>
-            <file>$PROJ_DIR$\drivers\fsl_ftm.h</file>
-            <file>$PROJ_DIR$\drivers\fsl_port.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_spi.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_spi.h</file>
-            <file>$PROJ_DIR$\drivers\fsl_common_arm.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_uart.h</file>
-            <file>$PROJ_DIR$\drivers\fsl_port.h</file>
-            <file>$PROJ_DIR$\drivers\fsl_uart.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_gpio.h</file>
-            <file>$PROJ_DIR$\source\header_files.h</file>
-            <file>$PROJ_DIR$\drivers\fsl_common.h</file>
-            <file>$PROJ_DIR$\source\main.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_flash.c</file>
-            <file>$PROJ_DIR$\drivers\fsl_gpio.c</file>
-            <file>$PROJ_DIR$\MKE06Z4\iar\MKE06Z128xxx4_flash.icf</file>
-            <file>$PROJ_DIR$\source\vac_define_config.h</file>
-            <file>$PROJ_DIR$\startup\startup_MKE06Z4.s</file>
-            <file>$PROJ_DIR$\utilities\fsl_debug_console.c</file>
-            <file>$PROJ_DIR$\source\vac_rs485.h</file>
-            <file>$PROJ_DIR$\utilities\fsl_debug_console.h</file>
-            <file>$TOOLKIT_DIR$\lib\dl6M_tln.a</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
-            <file>$PROJ_DIR$\debug\obj\startup\startup_MKE06Z4.o.rsp</file>
-            <file>$PROJ_DIR$\source\vac_uart.h</file>
-            <file>$PROJ_DIR$\source\vac_timer.c</file>
-            <file>$PROJ_DIR$\source\vac_timer.h</file>
-            <file>$PROJ_DIR$\APP_VAC_5G.mex</file>
-            <file>$TOOLKIT_DIR$\lib\m6M_tl.a</file>
-            <file>$TOOLKIT_DIR$\lib\rt6M_tl.a</file>
-            <file>$PROJ_DIR$\source\vac_flash_spi.h</file>
-            <file>$PROJ_DIR$\source\vac_rs485.c</file>
-            <file>$PROJ_DIR$\source\vac_i2c_soft.c</file>
-            <file>$PROJ_DIR$\utilities\fsl_assert.c</file>
-            <file>$PROJ_DIR$\source\vac_uart.c</file>
-            <file>$PROJ_DIR$\source\vac_variables.c</file>
-            <file>$PROJ_DIR$\source\vac_i2c_soft.h</file>
-            <file>$PROJ_DIR$\source\vac_variables.h</file>
-            <file>$PROJ_DIR$\debug\obj\source\main.o</file>
-            <file>$PROJ_DIR$\debug\obj\startup\startup_MKE06Z4.o</file>
-            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
             <file>$TOOLKIT_DIR$\inc\c\ycheck.h</file>
             <file>$PROJ_DIR$\debug\obj\source\vac_i2c_soft.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdbool.h</file>
+            <file>$PROJ_DIR$\debug\obj\drivers\fsl_flash.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\assert.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Config_Normal.h</file>
             <file>$PROJ_DIR$\debug\obj\drivers\fsl_spi.o</file>
             <file>$TOOLKIT_DIR$\inc\c\yvals.h</file>
-            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
-            <file>$PROJ_DIR$\debug\obj\board\board.o</file>
-            <file>$PROJ_DIR$\debug\obj\board\clock_config.o</file>
-            <file>$PROJ_DIR$\debug\obj\drivers\fsl_port.o</file>
             <file>$PROJ_DIR$\debug\obj\source\vac_rs485.o</file>
-            <file>$PROJ_DIR$\debug\list\app_vac_5g.map</file>
             <file>$TOOLKIT_DIR$\inc\c\stddef.h</file>
-            <file>$PROJ_DIR$\debug\obj\drivers\fsl_gpio.o</file>
-            <file>$PROJ_DIR$\debug\obj\drivers\fsl_uart.o</file>
-            <file>$PROJ_DIR$\debug\obj\board\pin_mux.o</file>
+            <file>$PROJ_DIR$\debug\obj\board\clock_config.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdlib.h</file>
+            <file>$PROJ_DIR$\debug\obj\source\vac_uart.o</file>
+            <file>$PROJ_DIR$\debug\obj\drivers\fsl_common.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\string.h</file>
+            <file>$PROJ_DIR$\debug\obj\source\vac_timer.o</file>
+            <file>$TOOLKIT_DIR$\lib\shb_l.a</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_stdlib.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product_string.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Defaults.h</file>
+            <file>$PROJ_DIR$\debug\obj\startup\startup_MKE06Z4.o</file>
+            <file>$PROJ_DIR$\debug\obj\board\board.o</file>
+            <file>$PROJ_DIR$\debug\obj\startup\startup_MKE06Z4.o.rsp</file>
+            <file>$PROJ_DIR$\debug\obj\component\uart\fsl_adapter_uart.o</file>
+            <file>$TOOLKIT_DIR$\inc\c\ysizet.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_Product.h</file>
+            <file>$PROJ_DIR$\debug\obj\component\lists\fsl_component_generic_list.o</file>
+            <file>$PROJ_DIR$\debug\obj\utilities\fsl_assert.o</file>
+            <file>$PROJ_DIR$\debug\obj\utilities\fsl_debug_console.o</file>
+            <file>$TOOLKIT_DIR$\lib\dl6M_tln.a</file>
+            <file>$TOOLKIT_DIR$\lib\m6M_tl.a</file>
+            <file>$TOOLKIT_DIR$\lib\rt6M_tl.a</file>
+            <file>$PROJ_DIR$\debug\obj\source\main.o</file>
+            <file>$PROJ_DIR$\debug\obj\drivers\fsl_clock.o</file>
+            <file>$PROJ_DIR$\debug\obj\device\system_MKE06Z4.o</file>
+            <file>$PROJ_DIR$\debug\obj\drivers\fsl_common_arm.o</file>
             <file>$PROJ_DIR$\debug\APP_VAC_5G.hex</file>
+            <file>$PROJ_DIR$\debug\obj\drivers\fsl_gpio.o</file>
+            <file>$PROJ_DIR$\debug\obj\board\pin_mux.o</file>
+            <file>$PROJ_DIR$\debug\obj\drivers\fsl_uart.o</file>
             <file>$PROJ_DIR$\debug\obj\source\vac_variables.o</file>
+            <file>$PROJ_DIR$\drivers\fsl_ftm.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_ftm.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_common_arm.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_gpio.c</file>
+            <file>$PROJ_DIR$\CMSIS\cmsis_version.h</file>
+            <file>$PROJ_DIR$\component\lists\fsl_component_generic_list.c</file>
+            <file>$PROJ_DIR$\device\system_MKE06Z4.c</file>
+            <file>$PROJ_DIR$\source\header_files.h</file>
+            <file>$PROJ_DIR$\CMSIS\core_cm0plus.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_clock.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_common.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_common.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_common_arm.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_port.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_spi.c</file>
+            <file>$PROJ_DIR$\source\main.c</file>
+            <file>$PROJ_DIR$\source\vac_define_config.h</file>
+            <file>$PROJ_DIR$\source\vac_flash_spi.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_clock.h</file>
+            <file>$PROJ_DIR$\source\vac_i2c_soft.c</file>
+            <file>$PROJ_DIR$\source\vac_rs485.c</file>
+            <file>$PROJ_DIR$\device\MKE06Z4.h</file>
+            <file>$PROJ_DIR$\device\MKE06Z4_features.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_uart.h</file>
+            <file>$PROJ_DIR$\source\vac_flash_spi.c</file>
+            <file>$PROJ_DIR$\source\vac_i2c_soft.h</file>
+            <file>$PROJ_DIR$\device\system_MKE06Z4.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_gpio.h</file>
+            <file>$PROJ_DIR$\MKE06Z4\iar\MKE06Z128xxx4_flash.icf</file>
+            <file>$PROJ_DIR$\component\uart\fsl_adapter_uart.c</file>
+            <file>$PROJ_DIR$\component\lists\fsl_component_generic_list.h</file>
+            <file>$PROJ_DIR$\device\fsl_device_registers.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_flash.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_uart.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_flash.c</file>
+            <file>$PROJ_DIR$\CMSIS\cmsis_iccarm.h</file>
+            <file>$PROJ_DIR$\component\uart\fsl_adapter_uart.h</file>
+            <file>$PROJ_DIR$\drivers\fsl_port.c</file>
+            <file>$PROJ_DIR$\drivers\fsl_spi.h</file>
+            <file>$PROJ_DIR$\debug\obj\source\vac_flash_spi.o</file>
+            <file>$PROJ_DIR$\source\vac_variables.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdint.h</file>
+            <file>$PROJ_DIR$\source\vac_uart.h</file>
+            <file>$PROJ_DIR$\source\vac_rs485.h</file>
+            <file>$PROJ_DIR$\source\vac_timer.h</file>
+            <file>$PROJ_DIR$\utilities\fsl_debug_console.c</file>
+            <file>$TOOLKIT_DIR$\inc\c\stdarg.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\aarch32\iccarm_builtin.h</file>
+            <file>$TOOLKIT_DIR$\inc\c\DLib_float_setup.h</file>
+            <file>$PROJ_DIR$\debug\obj\drivers\fsl_ftm.o</file>
+            <file>$PROJ_DIR$\debug\list\app_vac_5g.map</file>
+            <file>$PROJ_DIR$\debug\app_vac_5g.out</file>
+            <file>$PROJ_DIR$\source\vac_timer.c</file>
+            <file>$PROJ_DIR$\utilities\fsl_assert.c</file>
+            <file>$PROJ_DIR$\utilities\fsl_debug_console.h</file>
+            <file>$PROJ_DIR$\APP_VAC_5G.mex</file>
+            <file>$PROJ_DIR$\debug\obj\drivers\fsl_port.o</file>
+            <file>$PROJ_DIR$\source\vac_uart.c</file>
+            <file>$PROJ_DIR$\source\vac_variables.c</file>
+            <file>$PROJ_DIR$\startup\startup_MKE06Z4.s</file>
+            <file>$PROJ_DIR$\CMSIS\cmsis_compiler.h</file>
+            <file>$PROJ_DIR$\board\pin_mux.h</file>
         </outputs>
-        <file>
-            <name>$PROJ_DIR$\board\board.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 98</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 9 93 96 30 92 13 62 74 25 97 14 73 20 19 103 33 38 46 40 45 43 11 36 34 51 41 71 10 1 3 60</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\board\clock_config.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 99</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 3 62 74 93 96 30 92 13 25 9 97 14 73 20 19 103 33 38 46 40 45 43 11 36 34 51 41</file>
-                </tool>
-            </inputs>
-        </file>
         <file>
             <name>$PROJ_DIR$\board\pin_mux.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 106</file>
+                    <file> 44</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 62 74 93 96 30 92 13 25 9 97 14 73 20 19 103 33 38 46 40 45 43 11 36 34 51 41 58 60 5</file>
+                    <file> 57 10 6 13 25 11 31 8 88 20 30 24 17 23 15 78 68 55 51 107 82 94 73 69 59 65 60 74 108</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>[ROOT_NODE]</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 6 102</file>
-                </tool>
-            </outputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\debug\app_vac_5g.out</name>
-            <outputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 102</file>
-                </tool>
-                <tool>
-                    <name>OBJCOPY</name>
-                    <file> 107</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ILINK</name>
-                    <file> 66 98 99 21 18 23 28 29 26 22 31 12 104 100 95 105 90 106 91 16 8 94 101 27 15 108 17 81 80 72</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\component\uart\fsl_adapter_uart.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 21</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 62 74 93 96 30 92 13 25 9 97 14 73 20 19 103 33 38 46 40 45 43 11 36 34 51 41 57 37</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\device\system_MKE06Z4.c</name>
+            <name>$PROJ_DIR$\board\clock_config.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -214,222 +141,12 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 9 93 96 30 92 13 33 38 46 40 45 43 11 36 34</file>
+                    <file> 0 57 10 6 13 25 11 31 8 88 20 30 24 17 23 15 78 68 55 51 107 82 94 73 69 59 65</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\drivers\fsl_clock.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 23</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 41 62 74 93 96 30 92 13 25 9 97 14 73 20 19 103 33 38 46 40 45 43 11 36 34 51</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\drivers\fsl_common.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 28</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 62 74 93 96 30 92 13 25 9 97 14 73 20 19 103 33 38 46 40 45 43 11 36 34 51 41</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\component\lists\fsl_component_generic_list.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 26</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 44 62 74 93 96 30 92 13 25 9 97 14 73 20 19 103 33 38 46 40 45 43 11 36 34 51 41</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\source\vac_flash_spi.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 8</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 61 33 38 46 9 93 96 30 92 13 40 45 43 11 36 34 71 62 74 25 97 14 73 20 19 103 51 41 10 5 3 1 60 52 57 55 49 67 78 82 88 70 76 89</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\drivers\fsl_ftm.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 12</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 52 62 74 93 96 30 92 13 25 9 97 14 73 20 19 103 33 38 46 40 45 43 11 36 34 51 41</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\drivers\fsl_port.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 100</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 58 62 74 93 96 30 92 13 25 9 97 14 73 20 19 103 33 38 46 40 45 43 11 36 34 51 41</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\drivers\fsl_spi.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 95</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 55 62 74 93 96 30 92 13 25 9 97 14 73 20 19 103 33 38 46 40 45 43 11 36 34 51 41</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\drivers\fsl_common_arm.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 29</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 62 74 93 96 30 92 13 25 9 97 14 73 20 19 103 33 38 46 40 45 43 11 36 34 51 41</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\drivers\fsl_uart.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 105</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 57 62 74 93 96 30 92 13 25 9 97 14 73 20 19 103 33 38 46 40 45 43 11 36 34 51 41</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\source\main.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 90</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 61 33 38 46 9 93 96 30 92 13 40 45 43 11 36 34 71 62 74 25 97 14 73 20 19 103 51 41 10 5 3 1 60 52 57 55 49 67 78 82 88 70 76 89</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\drivers\fsl_flash.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 31</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 49 62 74 93 96 30 92 13 25 9 97 14 73 20 19 103 33 38 46 40 45 43 11 36 34 51 41</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\drivers\fsl_gpio.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 104</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 60 62 74 93 96 30 92 13 25 9 97 14 73 20 19 103 33 38 46 40 45 43 11 36 34 51 41</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\startup\startup_MKE06Z4.s</name>
-            <outputs>
-                <tool>
-                    <name>AARM</name>
-                    <file> 91</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>AARM</name>
-                    <file> 75</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\utilities\fsl_debug_console.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 22</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 10 20 93 96 30 92 13 14 19 24 7 71 62 74 25 9 97 73 103 33 38 46 40 45 43 11 36 34 51 41 37</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\source\vac_timer.c</name>
+            <name>$PROJ_DIR$\board\board.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -439,22 +156,151 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 61 33 38 46 9 93 96 30 92 13 40 45 43 11 36 34 71 62 74 25 97 14 73 20 19 103 51 41 10 5 3 1 60 52 57 55 49 67 78 82 88 70 76 89</file>
+                    <file> 88 6 13 25 11 31 57 10 8 20 30 24 17 23 15 78 68 55 51 107 82 94 73 69 59 65 101 93 2 0 74</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\source\vac_rs485.c</name>
+            <name>$PROJ_DIR$\debug\APP_VAC_5G.hex</name>
+            <inputs>
+                <tool>
+                    <name>OBJCOPY</name>
+                    <file> 98</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_ftm.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 101</file>
+                    <file> 96</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 61 33 38 46 9 93 96 30 92 13 40 45 43 11 36 34 71 62 74 25 97 14 73 20 19 103 51 41 10 5 3 1 60 52 57 55 49 67 78 82 88 70 76 89</file>
+                    <file> 48 57 10 6 13 25 11 31 8 88 20 30 24 17 23 15 78 68 55 51 107 82 94 73 69 59 65</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_common_arm.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 41</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 57 10 6 13 25 11 31 8 88 20 30 24 17 23 15 78 68 55 51 107 82 94 73 69 59 65</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_gpio.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 43</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 74 57 10 6 13 25 11 31 8 88 20 30 24 17 23 15 78 68 55 51 107 82 94 73 69 59 65</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\component\lists\fsl_component_generic_list.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 32</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 77 57 10 6 13 25 11 31 8 88 20 30 24 17 23 15 78 68 55 51 107 82 94 73 69 59 65</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\device\system_MKE06Z4.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 40</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 88 6 13 25 11 31 78 68 55 51 107 82 94 73 69</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_clock.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 39</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 65 57 10 6 13 25 11 31 8 88 20 30 24 17 23 15 78 68 55 51 107 82 94 73 69 59</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_common.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 19</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 57 10 6 13 25 11 31 8 88 20 30 24 17 23 15 78 68 55 51 107 82 94 73 69 59 65</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_spi.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 12</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 85 57 10 6 13 25 11 31 8 88 20 30 24 17 23 15 78 68 55 51 107 82 94 73 69 59 65</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\source\main.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 38</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 54 78 68 55 88 6 13 25 11 31 51 107 82 94 73 69 101 57 10 8 20 30 24 17 23 15 59 65 93 108 0 2 74 48 70 85 79 63 91 64 72 90 89 87</file>
                 </tool>
             </inputs>
         </file>
@@ -463,18 +309,172 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 94</file>
+                    <file> 7</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 61 33 38 46 9 93 96 30 92 13 40 45 43 11 36 34 71 62 74 25 97 14 73 20 19 103 51 41 10 5 3 1 60 52 57 55 49 67 78 82 88 70 76 89</file>
+                    <file> 54 78 68 55 88 6 13 25 11 31 51 107 82 94 73 69 101 57 10 8 20 30 24 17 23 15 59 65 93 108 0 2 74 48 70 85 79 63 91 64 72 90 89 87</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\source\vac_rs485.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 14</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 54 78 68 55 88 6 13 25 11 31 51 107 82 94 73 69 101 57 10 8 20 30 24 17 23 15 59 65 93 108 0 2 74 48 70 85 79 63 91 64 72 90 89 87</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\source\vac_flash_spi.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 86</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 54 78 68 55 88 6 13 25 11 31 51 107 82 94 73 69 101 57 10 8 20 30 24 17 23 15 59 65 93 108 0 2 74 48 70 85 79 63 91 64 72 90 89 87</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\component\uart\fsl_adapter_uart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 29</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 57 10 6 13 25 11 31 8 88 20 30 24 17 23 15 78 68 55 51 107 82 94 73 69 59 65 70 83</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_uart.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 45</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 70 57 10 6 13 25 11 31 8 88 20 30 24 17 23 15 78 68 55 51 107 82 94 73 69 59 65</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_flash.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 9</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 79 57 10 6 13 25 11 31 8 88 20 30 24 17 23 15 78 68 55 51 107 82 94 73 69 59 65</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\drivers\fsl_port.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 103</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 60 57 10 6 13 25 11 31 8 88 20 30 24 17 23 15 78 68 55 51 107 82 94 73 69 59 65</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\utilities\fsl_debug_console.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 34</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 93 17 6 13 25 11 31 30 23 5 95 101 57 10 8 88 20 24 15 78 68 55 51 107 82 94 73 69 59 65 83</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\debug\app_vac_5g.out</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 97</file>
+                </tool>
+                <tool>
+                    <name>OBJCOPY</name>
+                    <file> 42</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 75 27 16 29 33 39 19 41 32 34 9 96 43 103 12 45 38 44 26 40 86 7 14 21 18 46 22 37 36 35</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\source\vac_timer.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 21</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 54 78 68 55 88 6 13 25 11 31 51 107 82 94 73 69 101 57 10 8 20 30 24 17 23 15 59 65 93 108 0 2 74 48 70 85 79 63 91 64 72 90 89 87</file>
                 </tool>
             </inputs>
         </file>
         <file>
             <name>$PROJ_DIR$\utilities\fsl_assert.c</name>
+            <outputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 33</file>
+                </tool>
+            </outputs>
+            <inputs>
+                <tool>
+                    <name>ICCARM</name>
+                    <file> 57 10 6 13 25 11 31 8 88 20 30 24 17 23 15 78 68 55 51 107 82 94 73 69 59 65 101 93</file>
+                </tool>
+            </inputs>
+        </file>
+        <file>
+            <name>$PROJ_DIR$\source\vac_uart.c</name>
             <outputs>
                 <tool>
                     <name>ICCARM</name>
@@ -484,22 +484,7 @@
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 62 74 93 96 30 92 13 25 9 97 14 73 20 19 103 33 38 46 40 45 43 11 36 34 51 41 71 10</file>
-                </tool>
-            </inputs>
-        </file>
-        <file>
-            <name>$PROJ_DIR$\source\vac_uart.c</name>
-            <outputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 15</file>
-                </tool>
-            </outputs>
-            <inputs>
-                <tool>
-                    <name>ICCARM</name>
-                    <file> 61 33 38 46 9 93 96 30 92 13 40 45 43 11 36 34 71 62 74 25 97 14 73 20 19 103 51 41 10 5 3 1 60 52 57 55 49 67 78 82 88 70 76 89</file>
+                    <file> 54 78 68 55 88 6 13 25 11 31 51 107 82 94 73 69 101 57 10 8 20 30 24 17 23 15 59 65 93 108 0 2 74 48 70 85 79 63 91 64 72 90 89 87</file>
                 </tool>
             </inputs>
         </file>
@@ -508,24 +493,39 @@
             <outputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 108</file>
+                    <file> 46</file>
                 </tool>
             </outputs>
             <inputs>
                 <tool>
                     <name>ICCARM</name>
-                    <file> 61 33 38 46 9 93 96 30 92 13 40 45 43 11 36 34 71 62 74 25 97 14 73 20 19 103 51 41 10 5 3 1 60 52 57 55 49 67 78 82 88 70 76 89</file>
+                    <file> 54 78 68 55 88 6 13 25 11 31 51 107 82 94 73 69 101 57 10 8 20 30 24 17 23 15 59 65 93 108 0 2 74 48 70 85 79 63 91 64 72 90 89 87</file>
                 </tool>
             </inputs>
         </file>
         <file>
-            <name>$PROJ_DIR$\debug\APP_VAC_5G.hex</name>
+            <name>$PROJ_DIR$\startup\startup_MKE06Z4.s</name>
+            <outputs>
+                <tool>
+                    <name>AARM</name>
+                    <file> 26</file>
+                </tool>
+            </outputs>
             <inputs>
                 <tool>
-                    <name>OBJCOPY</name>
-                    <file> 6</file>
+                    <name>AARM</name>
+                    <file> 28</file>
                 </tool>
             </inputs>
+        </file>
+        <file>
+            <name>[ROOT_NODE]</name>
+            <outputs>
+                <tool>
+                    <name>ILINK</name>
+                    <file> 98 97</file>
+                </tool>
+            </outputs>
         </file>
     </configuration>
     <configuration>

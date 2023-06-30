@@ -1,29 +1,29 @@
-"C:\Users\Admin M1\Desktop\CodeNampt\BLD\board\board.c"
+"C:\Users\phamt\Desktop\CODE\BootloaderVAC\board\board.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -funsigned-char
 -MD
 -MF
-C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\BrowseInfo\board\board.pbi.dep
+C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\BrowseInfo\board\board.pbi.dep
 -o
-C:\Users\Admin M1\Desktop\CodeNampt\BLD\debug\BrowseInfo\board\board.pbi
+C:\Users\phamt\Desktop\CODE\BootloaderVAC\debug\BrowseInfo\board\board.pbi
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\BLD\board
+C:\Users\phamt\Desktop\CODE\BootloaderVAC\board
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\BLD/board\
+C:\Users\phamt\Desktop\CODE\BootloaderVAC/board
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\BLD/CMSIS\
+C:\Users\phamt\Desktop\CODE\BootloaderVAC/CMSIS
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\BLD/component/lists\
+C:\Users\phamt\Desktop\CODE\BootloaderVAC/component/lists
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\BLD/component/uart\
+C:\Users\phamt\Desktop\CODE\BootloaderVAC/component/uart
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\BLD/device\
+C:\Users\phamt\Desktop\CODE\BootloaderVAC/device
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\BLD/drivers\
+C:\Users\phamt\Desktop\CODE\BootloaderVAC/drivers
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\BLD/utilities\
+C:\Users\phamt\Desktop\CODE\BootloaderVAC/utilities
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\inc\c\aarch32
 -I
@@ -31,19 +31,19 @@ C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\inc
 -I
 C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\inc\c
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\BLD\board
+C:\Users\phamt\Desktop\CODE\BootloaderVAC\board
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\BLD\CMSIS
+C:\Users\phamt\Desktop\CODE\BootloaderVAC\CMSIS
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\BLD\component\lists
+C:\Users\phamt\Desktop\CODE\BootloaderVAC\component\lists
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\BLD\component\uart
+C:\Users\phamt\Desktop\CODE\BootloaderVAC\component\uart
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\BLD\device
+C:\Users\phamt\Desktop\CODE\BootloaderVAC\device
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\BLD\drivers
+C:\Users\phamt\Desktop\CODE\BootloaderVAC\drivers
 -I
-C:\Users\Admin M1\Desktop\CodeNampt\BLD\utilities
+C:\Users\phamt\Desktop\CODE\BootloaderVAC\utilities
 -D__CHAR_BITS__=8
 -D__CHAR_MAX__=0xff
 -D__CHAR_MIN__=0
