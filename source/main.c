@@ -10,23 +10,27 @@
 /*******************************************************************************
  * Definitions
  ******************************************************************************/
-
-
+#define Start_Add_FLASH_EX 600000
+#define BUFFER_LEN 4
 static void hardwawre_init(void);
 static void software_init(void);
-static void sys_control(void);
-
 //nampt
-#define pflashSectorSize 512 
 
-#define Start_Add_FLASH_EX 0x600000
-void sys_jumpApp(void);
-flash_config_t s_flashDriver;
+static void sys_jumpApp(void);
+static flash_config_t s_flashDriver;
 static void sys_boot(void);
 static void error_trap(void);
+static void read_flashEX(void);
 
-uint8_t g_sector_index;
-uint32_t cal_addr_sector(uint8_t sector_index);
+
+/*variable*/
+
+/*! @brief Buffer for program */
+static uint32_t s_buffer[BUFFER_LEN];
+/*! @brief Buffer for readback */
+static uint32_t s_buffer_rbc[BUFFER_LEN];
+
+uint8_t g_buffer_flashEX[BUFFER_LEN];
 
 /*******************************************************************************
  * Prototypes
@@ -38,7 +42,6 @@ uint32_t cal_addr_sector(uint8_t sector_index);
 /*!
  * @brief Main function
  */
-volatile bool ftm_isr_flag           = false;
 volatile uint32_t g_systickCounter;
 
 void SysTick_Handler(void)
@@ -48,7 +51,6 @@ void SysTick_Handler(void)
         g_systickCounter--;
     }
 }
-
 void SysTick_DelayTicks(uint32_t n)
 {
     g_systickCounter = n;
@@ -62,16 +64,10 @@ int main(void)
     ///1. init system===========================================================
     hardwawre_init();
     software_init();
-    SYSTEM_VAR_T *p_sys_var = &system_var;
-    /* Set systick reload value to generate 1ms interrupt */
-    
-    if (SysTick_Config(SystemCoreClock / 1000U))
-    {
-        while (1)
-        {
-        }
-    }
+    /* Set systick reload value to generate 1ms interrupt */ 
     //nampt
+    uint8_t buffTrans[]={1};
+    flash_write_buffer(USER_SPI1_MASTER,buffTrans, Start_Add_FLASH_EX,1);
     flash_read_buffer(USER_SPI1_MASTER,&system_var.u8NewFirmFlag1, Start_Add_FLASH_EX,1);
     flash_read_buffer(USER_SPI1_MASTER,&system_var.u8NewFirmFlag2, Start_Add_FLASH_EX,1);
     flash_read_buffer(USER_SPI1_MASTER,&system_var.u8NewFirmFlag2, Start_Add_FLASH_EX,1);
@@ -81,21 +77,8 @@ int main(void)
     else{
       sys_jumpApp();
     }
-    ///2. timer 50ms ===========================================================
-    while (1)
-    {
-        
-        if (ftm_isr_flag)
-        {
-          p_sys_var->sys_cnt++;
-          // system control=====================================================
-          sys_control();
-          // system control=====================================================
-          ftm_isr_flag = false;
-        }
-        __WFI();
+    while(1){
     }
-    ///3. ======================================================================
 }
 
 
@@ -115,82 +98,117 @@ static void software_init(void){
   init_rtc(RTC_SDA_PORT,RTC_SDA_PIN,RTC_SCL_PORT,RTC_SCL_PIN,MS);
 }
 
-static void sys_get_rtc(ST_TIME_FORMAT *p_get_rtc){
-  *p_get_rtc = get_time_rtc(RTC_SDA_PORT,RTC_SDA_PIN,RTC_SCL_PORT,RTC_SCL_PIN,MS);
-}
-
 ///3. sys_control===============================================================
 uint8_t  main_test = 0; 
 #define  TEST "thanhcm33"
 #define    ADDRRRR       0x600000 
 uint8_t  buff_read[512];
-static void sys_control(void){
-  ///1. led run.
-  RUN_LED_TOGGLE;
-  SYS_NORMAL_LED_TOGGLE;
-  sys_get_rtc(&rtc_DS3231);
-  ///2.
-  ///////////test//////////////////////////////////////////////////////////
-  if(main_test ==  5){
-    DIR_485_ON;
-    SysTick_DelayTicks(5);
-    UART_WriteBlocking(USER_UART2, TEST, strlen(TEST));
-    SysTick_DelayTicks(5);
-    DIR_485_OFF;
-    main_test = 0;
-  }
-  
-  ///test flash
-  if(main_test == 6){
-    flash_write_buffer(USER_SPI1_MASTER,TEST, ADDRRRR, 9);
-    main_test =0;
-  }else if(main_test == 7){
-    flash_erase_sector(USER_SPI1_MASTER,ADDRRRR);  
-    main_test = 0;
-  }else if(main_test == 8){
-    flash_read_buffer(USER_SPI1_MASTER,buff_read, ADDRRRR, 9);
-    main_test = 0;
-  }
-  ///////////test//////////////////////////////////////////////////////////
-  
-  
-}
+
 //nampt
 static void sys_boot(void){
-  uint32_t result;
-  memset(&s_flashDriver,0,sizeof(s_flashDriver));
-  FLASH_SetProperty(&s_flashDriver,kFLASH_PropertyFlashClockFrequency, 20000000U);
-  result = FLASH_Init(&s_flashDriver);
-  if (kStatus_FLASH_Success != result)
+    status_t result;    /* Return code from each flash driver function */
+    uint32_t destAdrss; /* Address of the target location */
+    uint32_t i;
+
+    uint32_t pflashBlockBase  = 0;
+    uint32_t pflashTotalSize  = 0;
+    uint32_t pflashSectorSize = 0;
+
+    /* Init hardware */
+    BOARD_InitBootPins();
+    BOARD_InitBootClocks();
+    BOARD_InitDebugConsole();
+
+    /* Clean up Flash driver Structure*/
+    memset(&s_flashDriver, 0, sizeof(flash_config_t));
+
+    FLASH_SetProperty(&s_flashDriver, kFLASH_PropertyFlashClockFrequency, 20000000U);
+    /* Setup flash driver structure for device and initialize variables. */
+    result = FLASH_Init(&s_flashDriver);
+    if (kStatus_FLASH_Success != result)
     {
         error_trap();
     }
-  // xoa 512 bytes trong sector
-  result = FLASH_Erase(&s_flashDriver, cal_addr_sector(0), pflashSectorSize, kFLASH_ApiEraseKey);
-  if (kStatus_FLASH_Success != result)
+    /* Get flash properties*/
+    pflashBlockBase  = s_flashDriver.PFlashBlockBase; // 0x00
+    pflashTotalSize  = s_flashDriver.PFlashTotalSize;// 128kb
+    pflashSectorSize = s_flashDriver.PFlashSectorSize;//512
+#ifndef SECTOR_INDEX_FROM_END
+#define SECTOR_INDEX_FROM_END 1U
+#endif
+
+/* Erase a sector from destAdrss. */
+#if defined(FSL_FEATURE_FLASH_HAS_PFLASH_BLOCK_SWAP) && FSL_FEATURE_FLASH_HAS_PFLASH_BLOCK_SWAP
+    /* Note: we should make sure that the sector shouldn't be swap indicator sector*/
+    destAdrss = pflashBlockBase + (pflashTotalSize - (SECTOR_INDEX_FROM_END * pflashSectorSize * 2));
+#else
+    destAdrss = pflashBlockBase + (pflashTotalSize - (SECTOR_INDEX_FROM_END * pflashSectorSize));
+#endif
+
+    result = FLASH_Erase(&s_flashDriver, destAdrss, pflashSectorSize, kFLASH_ApiEraseKey);
+    if (kStatus_FLASH_Success != result)
     {
         error_trap();
     }
-  
+    
+    
+    /* Prepare user buffer. */
+    
+    read_flashEX();
+//    for (i = 0; i < BUFFER_LEN; i++)
+//    {
+//        s_buffer[i] = i;
+//    }
+    
+    
+    /* Program user buffer into flash*/
+    result = FLASH_Program(&s_flashDriver, destAdrss, s_buffer, sizeof(s_buffer));
+    if (kStatus_FLASH_Success != result)
+    {
+        error_trap();
+    }
+    /* Verify programming by reading back from flash directly*/
+    for (i = 0; i < BUFFER_LEN; i++)
+    {
+        s_buffer_rbc[i] = *(volatile uint32_t *)(destAdrss + i * 4);
+        if (s_buffer_rbc[i] != s_buffer[i])
+        {
+            error_trap();
+        }
+    }
+    FLASH_Erase(&s_flashDriver, destAdrss, pflashSectorSize, kFLASH_ApiEraseKey);
 }
-void sys_jumpApp(void){
+static void sys_jumpApp(void){
   
 }
 
-void error_trap(void)
+static void error_trap(void)
 {
     PRINTF("\r\n\r\n\r\n\t---- HALTED DUE TO FLASH ERROR! ----");
     while (1)
     {
     }
 }
-uint32_t cal_addr_sector(uint8_t sector_index){
-  uint32_t retval= 0;
-  retval = FSL_FEATURE_FLASH_PFLASH_START_ADDRESS + sector_index * FSL_FEATURE_FLASH_PFLASH_BLOCK_SECTOR_SIZE;
-  return retval;
+
+
+static void read_flashEX(void){
+  uint8_t s_buffer_flashEX[4];
+  uint32_t i=0;
+  s_buffer_flashEX[0] = 0x01;
+  s_buffer_flashEX[1] = 0x02;
+  s_buffer_flashEX[2] = 0x03;
+  s_buffer_flashEX[3] = 0x04;
+  
+  //ghi vao flash ngoai
+  flash_write_buffer(USER_SPI1_MASTER,s_buffer_flashEX, Start_Add_FLASH_EX,4);
+  //doc tu flash ngoai
+  flash_read_buffer(USER_SPI1_MASTER,g_buffer_flashEX,Start_Add_FLASH_EX,4);
+  
+
+  s_buffer[0] = g_buffer_flashEX[i] 
+  
+  
 }
-
-
 
 
 

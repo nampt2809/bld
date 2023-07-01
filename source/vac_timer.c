@@ -40,6 +40,6 @@ void USER_FTM2_HANDLER(void)
     /* Clear interrupt flag.*/
     FTM_ClearStatusFlags(USER_FTM2_BASEADDR, kFTM_TimeOverflowFlag);
     //code here;
-    ftm_isr_flag = true;
+    //ftm_isr_flag = true;
     __DSB();
 }
