@@ -64,23 +64,18 @@
         <MemConfigValue>C:\Program Files\IAR Systems\Embedded Workbench 9.0\arm\CONFIG\debugger\NXP\MKE06Z128xxx4.ddf</MemConfigValue>
     </PlDriver>
     <JLinkDriver>
-        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
-        <CStepIntDis>_ 0</CStepIntDis>
         <jlinkResetStyle>12</jlinkResetStyle>
         <jlinkResetStrategy>0</jlinkResetStrategy>
         <TraceBufferSize>0x100</TraceBufferSize>
         <TraceStallIfFIFOFull>0x0</TraceStallIfFIFOFull>
         <TracePortSize>0x0</TracePortSize>
+        <LeaveTargetRunning>_ 0</LeaveTargetRunning>
+        <CStepIntDis>_ 0</CStepIntDis>
     </JLinkDriver>
     <ArmDriver>
         <EnableCache>0</EnableCache>
         <EnforceMemoryConfiguration>1</EnforceMemoryConfiguration>
     </ArmDriver>
-    <LogFile>
-        <LoggingEnabled>_ 0</LoggingEnabled>
-        <LogFile>_ "$PROJ_DIR$\LogFile1.log"</LogFile>
-        <Category2>_ 2</Category2>
-    </LogFile>
     <struct_types>
         <Fmt0>ST_TIME_FORMAT-date	3	0</Fmt0>
         <Fmt1>ST_TIME_FORMAT-day	3	0</Fmt1>
@@ -94,29 +89,10 @@
         <Enabled>0</Enabled>
         <ShowSource>0</ShowSource>
     </Trace2>
-    <DisassembleMode>
-        <mode>0</mode>
-    </DisassembleMode>
-    <Breakpoints2>
-        <Bp0>_ 0 "EMUL_CODE" "{$PROJ_DIR$\source\hello_world.c}.45.9" 0 0 1 "" 0 "" 0</Bp0>
-        <Bp1>_ 0 "EMUL_DATA" "main_test" 0 0 0 0 4294967295</Bp1>
-        <Bp2>_ 0 "EMUL_DATA" "main_test" 0 0 0 0 4294967295</Bp2>
-        <Bp3>_ 0 "EMUL_DATA" "main_test" 0 0 0 0 4294967295</Bp3>
-        <Bp4>_ 0 "EMUL_TRACE_STOP" "main_test" 0 0 0 0 4294967295 14214176 0 0</Bp4>
-        <Bp5>_ 0 "EMUL_TRACE_START" "main_test" 0 0 0 0 4294967295 3777097819 0 0</Bp5>
-        <Bp6>_ 1 "EMUL_TRACE_FILTER" "s_buffer" 0 0 0 0 4294967295 3777097819 0 0</Bp6>
-        <Bp7>_ 1 "EMUL_CODE" "{$PROJ_DIR$\source\main.c}.265.1" 0 0 1 "" 0 "" 0</Bp7>
-        <Bp8>_ 1 "EMUL_CODE" "{$PROJ_DIR$\source\main.c}.261.5" 0 0 1 "" 0 "" 0</Bp8>
-        <Count>9</Count>
-    </Breakpoints2>
     <TermIOLog>
         <LoggingEnabled>_ 0</LoggingEnabled>
         <LogFile>_ ""</LogFile>
     </TermIOLog>
-    <Aliases>
-        <Count>0</Count>
-        <SuppressDialog>0</SuppressDialog>
-    </Aliases>
     <DriverProfiling>
         <Enabled>0</Enabled>
         <Mode>1</Mode>
@@ -129,4 +105,28 @@
     <CallStackStripe>
         <ShowTiming>1</ShowTiming>
     </CallStackStripe>
+    <LogFile>
+        <LoggingEnabled>_ 0</LoggingEnabled>
+        <LogFile>_ "$PROJ_DIR$\LogFile1.log"</LogFile>
+        <Category2>_ 2</Category2>
+    </LogFile>
+    <DisassembleMode>
+        <mode>0</mode>
+    </DisassembleMode>
+    <Breakpoints2>
+        <Bp0>_ 0 "EMUL_CODE" "{$PROJ_DIR$\source\hello_world.c}.45.9" 0 0 1 "" 0 "" 0</Bp0>
+        <Bp1>_ 0 "EMUL_DATA" "main_test" 0 0 0 0 4294967295</Bp1>
+        <Bp2>_ 0 "EMUL_DATA" "main_test" 0 0 0 0 4294967295</Bp2>
+        <Bp3>_ 0 "EMUL_DATA" "main_test" 0 0 0 0 4294967295</Bp3>
+        <Bp4>_ 0 "EMUL_TRACE_STOP" "main_test" 0 0 0 0 4294967295 219731632 0 0</Bp4>
+        <Bp5>_ 0 "EMUL_TRACE_START" "main_test" 0 0 0 0 4294967295 3777097819 0 0</Bp5>
+        <Bp6>_ 1 "EMUL_TRACE_FILTER" "s_buffer" 0 0 0 0 4294967295 3777097819 0 0</Bp6>
+        <Bp7>_ 1 "EMUL_CODE" "{$PROJ_DIR$\source\main.c}.265.1" 0 0 1 "" 0 "" 0</Bp7>
+        <Bp8>_ 1 "EMUL_CODE" "{$PROJ_DIR$\source\main.c}.261.5" 0 0 1 "" 0 "" 0</Bp8>
+        <Count>9</Count>
+    </Breakpoints2>
+    <Aliases>
+        <Count>0</Count>
+        <SuppressDialog>0</SuppressDialog>
+    </Aliases>
 </settings>
